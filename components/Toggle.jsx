@@ -1,7 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import Icon from "./Icon";
 
 const Toggle = () => {
-  return <div>Toggle</div>;
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
+  };
+
+  return (
+    <div
+      className={`relative w-20 h-10 rounded-full p-1 cursor-pointer ${
+        isDarkMode ? "bg-secondaryDark" : "bg-primaryLight"
+      }`}
+      onClick={toggleTheme}
+    >
+      <div
+        className={`w-8 h-8 rounded-full absolute transition-transform duration-500 ease-out transform ${
+          isDarkMode
+            ? "translate-x-10 bg-primaryDark"
+            : "translate-x-0 bg-secondaryLight"
+        } flex items-center justify-center`}
+      >
+        <Icon
+          iconName={isDarkMode ? "moon" : "sun"}
+          color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
+          size="30"
+          className={`absolute ${isDarkMode ? "opacity-0" : "opacity-100"}`}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default Toggle;

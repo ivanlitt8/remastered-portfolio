@@ -1,50 +1,33 @@
 import React from "react";
 import Link from "next/link";
 import Toggle from "./Toggle";
+import Icon from "./Icon";
 import { useTheme } from "@/context/ThemeContext";
-import Image from "next/image";
-import { github, linkedin } from "../assets";
 
 const Navbar = () => {
-  const { isDarkMode } = useTheme();
+  // const { isDarkMode } = useTheme();
+
+  // console.log(isDarkMode);
 
   return (
-    <nav className="bg-gray-800 p-4 flex items-center justify-between">
+    <nav className="bg-secondaryLight py-2 flex items-center justify-between px-24">
       {/* Toggle de tema a la izquierda */}
-      <div className="flex items-center">
+      <div className="hidden md:flex items-center">
         <Toggle />
       </div>
 
       {/* Secciones de la navbar */}
-      <div className="flex space-x-4">
-        <Link href="/about">
-          <a className="text-white">About</a>
-        </Link>
-        <Link href="/contact">
-          <a className="text-white">Contact</a>
-        </Link>
-        <Link href="/projects">
-          <a className="text-white">Projects</a>
-        </Link>
-        <Link href="/services">
-          <a className="text-white">Services</a>
-        </Link>
+      <div className="hidden md:flex items-center text-white text-xl font-bold space-x-4 ml-auto mr-8">
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
+        <Link href="/projects">Projects </Link>
+        <Link href="/services">Services </Link>
       </div>
 
       {/* Iconos a la derecha */}
-      <div className="flex items-center space-x-2">
-        <Image
-          src={linkedin}
-          width={500}
-          height={500}
-          alt="Picture of the author"
-        />
-        <Image
-          src={github}
-          width={500}
-          height={500}
-          alt="Picture of the author"
-        />
+      <div className="hidden md:flex items-center space-x-4">
+        <Icon iconName="github" color={"white"} size={30} />
+        <Icon iconName="linkedin" color={"white"} size={30}></Icon>
       </div>
     </nav>
   );
