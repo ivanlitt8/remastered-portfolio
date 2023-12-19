@@ -1,13 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import NavBar from "@/components/Navbar";
-import { useContext } from "react";
-import { TaskContext } from "@/context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Home() {
-  const values = useContext(TaskContext);
-  console.log(values);
+  const { isDarkMode } = useTheme();
 
-  return <NavBar />;
+  return (
+    <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"}`}>
+      <NavBar />
+    </body>
+  );
 }

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.borderBottomDark {
+    border-bottom: 1px solid #C1CCD6;
+}

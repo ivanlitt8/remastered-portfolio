@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Icon from "./Icon";
+import { useTheme } from "@/context/ThemeContext";
 
 const Toggle = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
-  };
+  const { isDarkMode, toggleTheme } = useTheme();
 
   return (
     <div
