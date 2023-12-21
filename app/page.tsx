@@ -4,6 +4,7 @@ import NavBar from "@/components/Navbar";
 import Card from "@/components/Card";
 import GenericButton from "@/components/GenericButton";
 import { useTheme } from "@/context/ThemeContext";
+import Icon from "@/components/Icon";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -16,7 +17,40 @@ export default function Home() {
   return (
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"}`}>
       <NavBar />
-      <GenericButton onClick={handleClick} label="Botón en App" />
+      <h1
+        className={`text-8xl font-bold ml-20 ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
+        FullStack UxUi Developer
+      </h1>
+      <br />
+      <br />
+      <div className="mx-20 text-xl font-medium">
+        <p>
+          Welcome to my digital world! I am Ivan, a hybrid web developer with
+          experience in several key areas. I am currently studying ICT Analyst,
+          which has given me a solid background in information technology.
+        </p>
+        <br />
+        <br />
+        <p>
+          Every project is an opportunity to merge my technical skills with my
+          boundless creativity, as well as to rigorously apply logic and problem
+          solving. In my portfolio, you can explore examples of projects that
+          reflect this unique combination of skills. I invite you to explore my
+          portfolio and download my CV to learn more about my experience and
+          past projects - I hope you enjoy exploring my work!
+        </p>
+      </div>
+      <div className="my-10 flex justify-center">
+        <GenericButton
+          onClick={handleClick}
+          label="download cv"
+          icon="download"
+          uppercase={true}
+        />
+      </div>
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
@@ -39,6 +73,104 @@ export default function Home() {
       >
         Selected Projects
       </h2>
+      <h2
+        className={`text-8xl font-bold ml-20 ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
+        Technical Skills
+      </h2>
+      <Icon
+        iconName="figma"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="angular"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="react"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="javascript"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="tailwind"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="bootstrap"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="git"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="postman"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="springboot"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="mysql"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="java"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <Icon
+        iconName="api"
+        color={isDarkMode ? "#C1CCD6" : "#252525"}
+        size={100}
+      />
+      <h2
+        className={`text-8xl font-bold ml-20 ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
+        Education
+      </h2>
+      <h2
+        className={`text-8xl font-bold ml-20 ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
+        Contact
+      </h2>
+      <br />
+      <br />
+      <p className=" mx-20 text-xl font-medium">
+        Do you have a question or an idea in mind? I am here to help you! Feel
+        free to contact me via email. I look forward to hearing your thoughts
+        and collaborating on your next project.
+      </p>
+      <br />
+      <br />
+      <div className="my-10 flex justify-center">
+        <GenericButton
+          onClick={handleClick}
+          label="Drop me an email"
+          icon="send"
+          uppercase={false}
+        />
+      </div>
     </body>
   );
 }
