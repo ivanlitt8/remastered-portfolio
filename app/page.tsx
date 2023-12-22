@@ -80,66 +80,68 @@ export default function Home() {
       >
         Technical Skills
       </h2>
-      <Icon
-        iconName="figma"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="angular"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="react"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="javascript"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="tailwind"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="bootstrap"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="git"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="postman"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="springboot"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="mysql"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="java"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
-      <Icon
-        iconName="api"
-        color={isDarkMode ? "#C1CCD6" : "#252525"}
-        size={100}
-      />
+      <div className="flex mt-5 mx-20 flex-wrap justify-center">
+        <Icon
+          iconName="figma"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="angular"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="react"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="javascript"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="tailwind"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="bootstrap"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="git"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="postman"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="springboot"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="mysql"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="java"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+        <Icon
+          iconName="api"
+          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          size={100}
+        />
+      </div>
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
