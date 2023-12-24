@@ -26,7 +26,11 @@ export default function Home() {
       </h1>
       <br />
       <br />
-      <div className="mx-20 text-xl font-medium">
+      <div
+        className={`mx-20 text-xl font-medium ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
         <p>
           Welcome to my digital world! I am Ivan, a hybrid web developer with
           experience in several key areas. I am currently studying ICT Analyst,
@@ -158,21 +162,25 @@ export default function Home() {
       </h2>
       <br />
       <br />
-      <p className=" mx-20 text-xl font-medium">
+      <p
+        className={`mx-20 text-xl font-medium ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
         Do you have a question or an idea in mind? I am here to help you! Feel
         free to contact me via email. I look forward to hearing your thoughts
         and collaborating on your next project.
       </p>
       <br />
       <br />
-      <div className="my-10 flex justify-center">
+      {/* <div className="my-10 flex justify-center">
         <GenericButton
           onClick={handleClick}
           label="Drop me an email"
           icon="send"
           uppercase={false}
         />
-      </div>
+      </div> */}
     </body>
   );
 }
