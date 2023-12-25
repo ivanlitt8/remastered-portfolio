@@ -4,7 +4,6 @@ import Toggle from "./Toggle";
 import Icon from "./Icon";
 import BurguerButton from "./BurguerButton";
 import styled from "styled-components";
-
 import { useTheme } from "@/context/ThemeContext";
 
 const Navbar = () => {

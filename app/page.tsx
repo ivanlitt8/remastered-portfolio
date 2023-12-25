@@ -2,9 +2,11 @@
 
 import NavBar from "@/components/Navbar";
 import Card from "@/components/Card";
-import GenericButton from "@/components/GenericButton";
+import CvButton from "@/components/CvButton";
 import { useTheme } from "@/context/ThemeContext";
-import Icon from "@/components/Icon";
+import IconList from "@/components/IconList";
+import MailButton from "@/components/MailButton";
+import FilterContainer from "@/components/FilterContainer";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -17,6 +19,7 @@ export default function Home() {
   return (
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"}`}>
       <NavBar />
+
       <h1
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
@@ -48,7 +51,7 @@ export default function Home() {
         </p>
       </div>
       <div className="my-10 flex justify-center">
-        <GenericButton
+        <CvButton
           onClick={handleClick}
           label="download cv"
           icon="download"
@@ -77,6 +80,7 @@ export default function Home() {
       >
         Selected Projects
       </h2>
+      <FilterContainer />
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
@@ -85,66 +89,68 @@ export default function Home() {
         Technical Skills
       </h2>
       <div className="flex mt-5 mx-20 flex-wrap justify-center">
-        <Icon
+        <IconList isDarkMode={isDarkMode} />
+
+        {/* <Icon
           iconName="figma"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="angular"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="react"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="javascript"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="tailwind"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="bootstrap"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="git"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="postman"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="springboot"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="mysql"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="java"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
         />
         <Icon
           iconName="api"
-          color={isDarkMode ? "#C1CCD6" : "#252525"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
           size={100}
-        />
+        /> */}
       </div>
       <h2
         className={`text-8xl font-bold ml-20 ${
@@ -173,14 +179,14 @@ export default function Home() {
       </p>
       <br />
       <br />
-      {/* <div className="my-10 flex justify-center">
-        <GenericButton
+      <div className="my-10 flex justify-center">
+        <MailButton
           onClick={handleClick}
           label="Drop me an email"
           icon="send"
           uppercase={false}
         />
-      </div> */}
+      </div>
     </body>
   );
 }
