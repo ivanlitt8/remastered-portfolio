@@ -30,18 +30,3 @@ const Filter = ({ id, label, onFilterClick, activeFilter }) => {
 };
 
 export default Filter;
-
-//   return (
-//     <div
-//       className={`border-2 rounded-full cursor-pointer w-20 text-center text-lg font-medium uppercase ${
-//         isDarkMode
-//           ? "bg-primaryDark border-secondaryDark text-secondaryDark"
-//           : "bg-primaryLight border-secondaryLight text-secondaryLight"
-//       }`}
-//     >
-//       {label}
-//     </div>
-//   );
-// };
-
-// export default Filter;

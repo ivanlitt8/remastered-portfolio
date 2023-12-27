@@ -21,7 +21,7 @@ export default function Home() {
       <NavBar />
 
       <h1
-        className={`text-8xl font-bold ml-20 ${
+        className={`text-8xl font-Mersad font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >
