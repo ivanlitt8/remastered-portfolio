@@ -1,7 +1,7 @@
 "use client";
 
 import NavBar from "@/components/Navbar";
-import Card from "@/components/Card";
+import CardContainer from "@/components/CardContainer";
 import CvButton from "@/components/CvButton";
 import { useTheme } from "@/context/ThemeContext";
 import IconList from "@/components/IconList";
@@ -19,7 +19,6 @@ export default function Home() {
   return (
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"}`}>
       <NavBar />
-
       <h1
         className={`text-8xl font-Mersad font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
@@ -65,14 +64,7 @@ export default function Home() {
       >
         Services
       </h2>
-      <div className="flex mt-5 mx-20 flex-wrap justify-center">
-        <Card number={"1."} title="Desing" name={"letter"} />
-        {/* <Card number={"2."} title="Frontend" name={"carbon"} />
-        <Card number={"3."} title="Backend" name={"chip"} />
-        <Card number={"4."} title="Deploy" name={"deploy"} />
-        <Card number={"5."} title="Data Base" name={"database"} />
-        <Card number={"6."} title="Maintenance" name={"wrench"} /> */}
-      </div>
+      <CardContainer />
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
@@ -90,67 +82,6 @@ export default function Home() {
       </h2>
       <div className="flex mt-5 mx-20 flex-wrap justify-center">
         <IconList isDarkMode={isDarkMode} />
-
-        {/* <Icon
-          iconName="figma"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="angular"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="react"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="javascript"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="tailwind"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="bootstrap"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="git"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="postman"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="springboot"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="mysql"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="java"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        />
-        <Icon
-          iconName="api"
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={100}
-        /> */}
       </div>
       <h2
         className={`text-8xl font-bold ml-20 ${
