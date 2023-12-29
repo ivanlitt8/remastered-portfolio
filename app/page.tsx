@@ -7,6 +7,7 @@ import { useTheme } from "@/context/ThemeContext";
 import IconList from "@/components/IconList";
 import MailButton from "@/components/MailButton";
 import FilterContainer from "@/components/FilterContainer";
+import ProjectsContainer from "@/components/ProjectsContainer";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -73,6 +74,8 @@ export default function Home() {
         Selected Projects
       </h2>
       <FilterContainer />
+      <ProjectsContainer />
+
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
