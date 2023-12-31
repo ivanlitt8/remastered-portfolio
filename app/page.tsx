@@ -5,9 +5,11 @@ import CardContainer from "@/components/CardContainer";
 import CvButton from "@/components/CvButton";
 import { useTheme } from "@/context/ThemeContext";
 import IconList from "@/components/IconList";
+import Icon from "@/components/Icon";
 import MailButton from "@/components/MailButton";
 import FilterContainer from "@/components/FilterContainer";
 import ProjectsContainer from "@/components/ProjectsContainer";
+import EducationGrid from "@/components/EducationGrid";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -75,7 +77,6 @@ export default function Home() {
       </h2>
       <FilterContainer />
       <ProjectsContainer />
-
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
@@ -93,6 +94,7 @@ export default function Home() {
       >
         Education
       </h2>
+      <EducationGrid />
       <h2
         className={`text-8xl font-bold ml-20 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
