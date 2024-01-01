@@ -5,7 +5,6 @@ import CardContainer from "@/components/CardContainer";
 import CvButton from "@/components/CvButton";
 import { useTheme } from "@/context/ThemeContext";
 import IconList from "@/components/IconList";
-import Icon from "@/components/Icon";
 import MailButton from "@/components/MailButton";
 import FilterContainer from "@/components/FilterContainer";
 import ProjectsContainer from "@/components/ProjectsContainer";
@@ -16,7 +15,6 @@ export default function Home() {
 
   const handleClick = () => {
     console.log("Botón clickeado desde App");
-    // Agrega aquí la lógica específica que deseas ejecutar
   };
 
   return (

@@ -2,6 +2,7 @@ import React from "react";
 import Icon from "./Icon";
 import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
+import AnimatedText from "./AnimatedText";
 
 const EducationGrid = () => {
   const { isDarkMode } = useTheme();
@@ -16,28 +17,34 @@ const EducationGrid = () => {
     <div className="flex flex-col">
       <div className="flex-grow flex justify-between mx-24">
         <h3 className="text-5xl mx-20">Academic Studies</h3>
-        <div
-          className="cursor-pointer transform transition-transform duration-1000"
-          onClick={handleToggleContent}
-        >
+        <div className="cursor-pointer" onClick={handleToggleContent}>
           <Icon
             iconName={isContentVisible ? "minus" : "plus"}
             color={isDarkMode ? "#C1CCD6" : "#545454"}
             size={50}
           />
-          <div
-            className={`overflow-hidden transition-max-height duration-500 ${
-              isContentVisible ? "max-h-screen" : "max-h-0"
-            }`}
-          >
-            {/* Aquí va tu contenido desplegable */}
-            Tu contenido desplegable aquí...
-          </div>
         </div>
       </div>
+      {isContentVisible && (
+        <>
+          <AnimatedText
+            text={"ITC Analyst"}
+            place={"Universidad Nacional de La Plata"}
+            dates={"2021 - present"}
+            isVisible={isContentVisible}
+          />
+          <div className="border-b border-black border-2 mx-52"></div>
+          <AnimatedText
+            text={"Degree in computer science"}
+            place={"Universidad Nacional de La Plata"}
+            dates={"2023 - present"}
+            isVisible={isContentVisible}
+          />
+        </>
+      )}
 
       <div className="border-b border-black mx-20"></div>
-      <div className="flex-grow flex justify-between mx-24">
+      {/* <div className="flex-grow flex justify-between mx-24">
         <h3 className="text-5xl mx-20">Courses</h3>
         <Icon
           iconName={"plus"}
@@ -54,7 +61,7 @@ const EducationGrid = () => {
           size={50}
         />
       </div>
-      <div className="border-b border-black mx-20"></div>
+      <div className="border-b border-black mx-20"></div> */}
     </div>
   );
 };
