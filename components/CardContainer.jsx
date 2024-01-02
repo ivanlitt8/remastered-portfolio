@@ -29,7 +29,7 @@ const CardContainer = () => {
         }
       />
       <Card
-        number={"3."}
+        number={"4."}
         title="Deploy"
         name={"deploy"}
         content={
@@ -37,7 +37,7 @@ const CardContainer = () => {
         }
       />
       <Card
-        number={"4."}
+        number={"5."}
         title="Data Base"
         name={"database"}
         content={
@@ -45,7 +45,7 @@ const CardContainer = () => {
         }
       />
       <Card
-        number={"5."}
+        number={"6."}
         title="Maintenance"
         name={"wrench"}
         content={

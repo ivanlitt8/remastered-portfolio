@@ -21,7 +21,7 @@ export default function Home() {
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"}`}>
       <NavBar />
       <h1
-        className={`text-8xl font-Mersad font-bold ml-20 ${
+        className={`text-8xl font-Mersad font-bold ml-20 mt-10 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >
@@ -59,7 +59,7 @@ export default function Home() {
         />
       </div>
       <h2
-        className={`text-8xl font-bold ml-20 ${
+        className={`text-8xl font-bold ml-20 mt-24 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >
@@ -67,7 +67,7 @@ export default function Home() {
       </h2>
       <CardContainer />
       <h2
-        className={`text-8xl font-bold ml-20 ${
+        className={`text-8xl font-bold ml-20 mt-24 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >
@@ -76,7 +76,7 @@ export default function Home() {
       <FilterContainer />
       <ProjectsContainer />
       <h2
-        className={`text-8xl font-bold ml-20 ${
+        className={`text-8xl font-bold ml-20 mt-24 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >
@@ -86,7 +86,7 @@ export default function Home() {
         <IconList isDarkMode={isDarkMode} />
       </div>
       <h2
-        className={`text-8xl font-bold ml-20 ${
+        className={`text-8xl font-bold ml-20 mt-24 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >
@@ -94,7 +94,7 @@ export default function Home() {
       </h2>
       <EducationGrid />
       <h2
-        className={`text-8xl font-bold ml-20 ${
+        className={`text-8xl font-bold ml-20 mt-24 ${
           isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
         }`}
       >

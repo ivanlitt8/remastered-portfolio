@@ -1,67 +1,151 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "./Icon";
-import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import AnimatedText from "./AnimatedText";
 
 const EducationGrid = () => {
   const { isDarkMode } = useTheme();
-  const [isContentVisible, setContentVisibility] = useState(false);
 
-  const handleToggleContent = () => {
-    console.log("Toggle content clicked");
-    setContentVisibility(!isContentVisible);
+  const [sectionVisibility, setSectionVisibility] = useState({
+    academicStudies: false,
+    courses: false,
+    languages: false,
+  });
+
+  const handleToggleContent = (section) => {
+    setSectionVisibility((prevVisibility) => {
+      return { ...prevVisibility, [section]: !prevVisibility[section] };
+    });
   };
 
   return (
     <div className="flex flex-col">
-      <div className="flex-grow flex justify-between mx-24">
-        <h3 className="text-5xl mx-20">Academic Studies</h3>
-        <div className="cursor-pointer" onClick={handleToggleContent}>
+      <div className="flex-grow flex justify-between mx-24 mt-5">
+        <h3
+          className={`text-5xl mx-20 ${
+            isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+          }`}
+        >
+          Academic Studies
+        </h3>
+        <div
+          className="cursor-pointer"
+          onClick={() => handleToggleContent("academicStudies")}
+        >
           <Icon
-            iconName={isContentVisible ? "minus" : "plus"}
+            iconName={sectionVisibility["academicStudies"] ? "minus" : "plus"}
             color={isDarkMode ? "#C1CCD6" : "#545454"}
             size={50}
           />
         </div>
       </div>
-      {isContentVisible && (
+      {sectionVisibility["academicStudies"] && (
         <>
           <AnimatedText
             text={"ITC Analyst"}
             place={"Universidad Nacional de La Plata"}
             dates={"2021 - present"}
-            isVisible={isContentVisible}
+            isVisible={sectionVisibility["academicStudies"]}
           />
-          <div className="border-b border-black border-2 mx-52"></div>
+          <div
+            className={`border-b border-2 mx-52 ${
+              isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
+            }`}
+          ></div>
           <AnimatedText
             text={"Degree in computer science"}
             place={"Universidad Nacional de La Plata"}
             dates={"2023 - present"}
-            isVisible={isContentVisible}
+            isVisible={sectionVisibility["academicStudies"]}
           />
         </>
       )}
-
-      <div className="border-b border-black mx-20"></div>
-      {/* <div className="flex-grow flex justify-between mx-24">
-        <h3 className="text-5xl mx-20">Courses</h3>
-        <Icon
-          iconName={"plus"}
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={50}
-        />
+      <div
+        className={`border-b border-2 mx-20 ${
+          isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
+        }`}
+      ></div>
+      <div className="flex-grow flex justify-between mx-24 mt-5">
+        <h3
+          className={`text-5xl mx-20 ${
+            isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+          }`}
+        >
+          Courses
+        </h3>
+        <div
+          className="cursor-pointer"
+          onClick={() => handleToggleContent("courses")}
+        >
+          <Icon
+            iconName={sectionVisibility["courses"] ? "minus" : "plus"}
+            color={isDarkMode ? "#C1CCD6" : "#545454"}
+            size={50}
+          />
+        </div>
       </div>
-      <div className="border-b border-black mx-20"></div>
-      <div className="flex-grow flex justify-between mx-24">
-        <h3 className="text-5xl mx-20">Languages</h3>
-        <Icon
-          iconName={"plus"}
-          color={isDarkMode ? "#C1CCD6" : "#545454"}
-          size={50}
-        />
+      {sectionVisibility["courses"] && (
+        <>
+          <AnimatedText
+            text={"ITC Analyst"}
+            place={"Universidad Nacional de La Plata"}
+            dates={"2021 - present"}
+            isVisible={sectionVisibility["courses"]}
+          />
+          <div
+            className={`border-b border-2 mx-52 ${
+              isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
+            }`}
+          ></div>
+          <AnimatedText
+            text={"Degree in computer science"}
+            place={"Universidad Nacional de La Plata"}
+            dates={"2023 - present"}
+            isVisible={sectionVisibility["courses"]}
+          />
+        </>
+      )}
+      <div
+        className={`border-b border-2 mx-20 ${
+          isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
+        }`}
+      ></div>
+      <div className="flex-grow flex justify-between mx-24 mt-5">
+        <h3
+          className={`text-5xl mx-20 ${
+            isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+          }`}
+        >
+          Languages
+        </h3>
+        <div
+          className="cursor-pointer"
+          onClick={() => handleToggleContent("languages")}
+        >
+          <Icon
+            iconName={sectionVisibility["languages"] ? "minus" : "plus"}
+            color={isDarkMode ? "#C1CCD6" : "#545454"}
+            size={50}
+          />
+        </div>
       </div>
-      <div className="border-b border-black mx-20"></div> */}
+      {sectionVisibility["languages"] && (
+        <>
+          <AnimatedText
+            text={"Native: Spanish"}
+            isVisible={sectionVisibility["languages"]}
+          />
+          <div
+            className={`border-b border-2 mx-52 ${
+              isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
+            }`}
+          ></div>
+          <AnimatedText
+            text={"Others: English C1"}
+            isVisible={sectionVisibility["languages"]}
+          />
+        </>
+      )}
     </div>
   );
 };
