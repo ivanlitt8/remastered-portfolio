@@ -11,6 +11,9 @@ const AnimatedText = ({ text, place, dates, isVisible }) => {
     config: { duration: 1000 },
   });
 
+  console.log("isVisible:", isVisible);
+  console.log("props:", props);
+
   return (
     <animated.div style={props} className="flex flex-row mx-52 space-x-2 my-5">
       <Icon
