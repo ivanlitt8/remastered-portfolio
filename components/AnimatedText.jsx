@@ -11,26 +11,28 @@ const AnimatedText = ({ text, place, dates, isVisible }) => {
     config: { duration: 1000 },
   });
 
-  console.log("isVisible:", isVisible);
-  console.log("props:", props);
-
   return (
-    <animated.div style={props} className="flex flex-row mx-52 space-x-2 my-5">
-      <Icon
-        iconName={"star"}
-        color={isDarkMode ? "#C1CCD6" : "#545454"}
-        size={20}
-      />
-      <div
-        className={`${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
+    isVisible && (
+      <animated.div
+        style={props}
+        className="flex flex-row mx-52 space-x-2 my-5"
       >
-        <h2>{text}</h2>
-        <h2>{place}</h2>
-        <h2>{dates}</h2>
-      </div>
-    </animated.div>
+        <Icon
+          iconName={"star"}
+          color={isDarkMode ? "#C1CCD6" : "#545454"}
+          size={20}
+        />
+        <div
+          className={`${
+            isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+          }`}
+        >
+          <h2>{text}</h2>
+          <h2>{place}</h2>
+          <h2>{dates}</h2>
+        </div>
+      </animated.div>
+    )
   );
 };
 
