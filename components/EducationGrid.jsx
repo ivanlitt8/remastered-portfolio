@@ -86,15 +86,10 @@ const EducationGrid = () => {
         dates={"2021 - present"}
         isVisible={sectionVisibility["courses"]}
       />
-      {sectionVisibility["courses"] && (
-        <>
-          <div
-            className={`border-b border-2 mx-52 ${
-              isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
-            }`}
-          ></div>
-        </>
-      )}
+      <AnimatedBorder
+        isVisible={sectionVisibility["courses"]}
+        isDarkMode={isDarkMode}
+      />
       <AnimatedText
         text={"Degree in computer science"}
         place={"Universidad Nacional de La Plata"}
@@ -129,15 +124,10 @@ const EducationGrid = () => {
         text={"Native: Spanish"}
         isVisible={sectionVisibility["languages"]}
       />
-      {sectionVisibility["languages"] && (
-        <>
-          <div
-            className={`border-b border-2 mx-52 ${
-              isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
-            }`}
-          ></div>
-        </>
-      )}
+      <AnimatedBorder
+        isVisible={sectionVisibility["languages"]}
+        isDarkMode={isDarkMode}
+      />
       <AnimatedText
         text={"Others: English C1"}
         isVisible={sectionVisibility["languages"]}

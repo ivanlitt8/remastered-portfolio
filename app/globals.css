@@ -7,3 +7,38 @@
 .borderBottomDark {
     border-bottom: 1px solid #C1CCD6;
 }
+
+/* Estilos base */
+
+/* 
+
+ .dark-mode:hover {
+    opacity: 0.8;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-color: #ecf0f1;
+}
+
+.light-mode:hover {
+    opacity: 0.8;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+*/
+
+
+/* 
+To do:
+    * Desing and code image landing
+    * Hover buttons
+    * Responsibe Projects
+    * Responsive page
+    * Function filter
+    * Function Buttons
+    * Navbar Style (hover)
+    * Links Navbar
+    * Probar directivas hover en css
+
+*/

@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 
-const Icon = ({ iconName, color, size }) => {
+const Icon = ({ iconName, color, hoverColor, size, isHovered }) => {
   // Definir el objeto con los SVG
+
+  const fillColor = isHovered ? hoverColor : color;
+
   const icons = {
     github: (
       <svg
@@ -207,7 +210,7 @@ const Icon = ({ iconName, color, size }) => {
       >
         <path
           d="M24.7619 40L40 56.1219L55.2381 40.1562M40 13.3333V55.2381M17.1429 66.6666H62.8572"
-          stroke={color}
+          stroke={fillColor}
           strokeWidth="3.80952"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -224,7 +227,7 @@ const Icon = ({ iconName, color, size }) => {
       >
         <path
           d="M20 63.3333L63.3333 20M63.3333 20V61.6M63.3333 20H21.7333"
-          stroke={color}
+          stroke={fillColor}
           strokeWidth="5"
           strokeLinecap="round"
           strokeLinejoin="round"

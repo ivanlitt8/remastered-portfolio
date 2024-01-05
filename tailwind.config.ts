@@ -38,6 +38,7 @@ const config: Config = {
         'colorDark': '#C1CCD6',
         'hoverDark': '#C1CCD6',
         'activeDark': '#272329',
+        'hoverOptional': '#858484',
         },
     },
   },

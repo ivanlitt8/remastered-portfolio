@@ -9,6 +9,7 @@ import MailButton from "@/components/MailButton";
 import FilterContainer from "@/components/FilterContainer";
 import ProjectsContainer from "@/components/ProjectsContainer";
 import EducationGrid from "@/components/EducationGrid";
+import CopyButton from "@/components/CopyButton";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
