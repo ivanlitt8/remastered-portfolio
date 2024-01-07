@@ -31,31 +31,51 @@ const Navbar = () => {
               isDarkMode ? "text-secondaryDark" : "text-primaryLight"
             } flex-col md:flex-row`}
           >
-            <Link href="/about" onClick={handleClick}>
+            <Link
+              href="/about"
+              className="transition-all transform hover:scale-125 hover:px-3 duration-500"
+              onClick={handleClick}
+            >
               <span>About</span>
             </Link>
-            <Link href="/contact" onClick={handleClick}>
+            <Link
+              href="/contact"
+              className="transition-all transform hover:scale-125 hover:px-3  duration-500"
+              onClick={handleClick}
+            >
               <span>Contact</span>
             </Link>
-            <Link href="/projects" onClick={handleClick}>
+            <Link
+              href="/projects"
+              className="transition-all transform hover:scale-125 hover:px-3 duration-500"
+              onClick={handleClick}
+            >
               <span>Projects</span>
             </Link>
-            <Link href="/services" onClick={handleClick}>
+            <Link
+              href="/services"
+              className="transition-all transform hover:scale-125 hover:px-3 duration-500"
+              onClick={handleClick}
+            >
               <span>Services</span>
             </Link>
 
             {/* Iconos a la derecha */}
             <div className="flex items-center space-x-4">
-              <Icon
-                iconName="github"
-                color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
-                size={30}
-              />
-              <Icon
-                iconName="linkedin"
-                color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
-                size={30}
-              ></Icon>
+              <div className="hover:scale-125 transition-all cursor-pointer duration-500 hover:px-2">
+                <Icon
+                  iconName="github"
+                  color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
+                  size={30}
+                />
+              </div>
+              <div className="hover:scale-125 transition-all cursor-pointer duration-500 hover:px-2">
+                <Icon
+                  iconName="linkedin"
+                  color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
+                  size={30}
+                ></Icon>
+              </div>
             </div>
           </div>
         </div>

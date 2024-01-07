@@ -2,14 +2,17 @@ import React from "react";
 import Icon from "./Icon";
 import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
+import Link from "next/link";
 
-const MailButton = ({ onClick, label, icon, uppercase }) => {
+const MailButton = ({ label, icon, uppercase }) => {
   const { isDarkMode } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
+  const mail = "ivanlitt8@gmail.com";
+
   return (
-    <button
-      onClick={onClick}
+    <Link
+      href={`mailto:${mail}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={` ${
@@ -34,7 +37,7 @@ const MailButton = ({ onClick, label, icon, uppercase }) => {
           />
         </div>
       </span>
-    </button>
+    </Link>
   );
 };
 export default MailButton;
