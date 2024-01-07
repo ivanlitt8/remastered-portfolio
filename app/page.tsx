@@ -114,13 +114,14 @@ export default function Home() {
       </p>
       <br />
       <br />
-      <div className="my-10 flex justify-center">
+      <div className="my-10 flex justify-center space-x-4">
         <MailButton
           onClick={handleClick}
           label="Drop me an email"
           icon="send"
           uppercase={false}
         />
+        <CopyButton label="copy" icon="copy" uppercase={false} />
       </div>
     </body>
   );
