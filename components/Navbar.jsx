@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Toggle from "./Toggle";
 import Icon from "./Icon";
@@ -9,16 +9,60 @@ import { useTheme } from "@/context/ThemeContext";
 const Navbar = () => {
   const { isDarkMode } = useTheme();
   const [clicked, setClicked] = useState(false);
+  // const [scrolling, setScrolling] = useState(false);
+
+  // const handleClick = () => {
+  //   setClicked(!clicked);
+  // };
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setScrolling(true);
+  //     } else {
+  //       setScrolling(false);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
+
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   const handleClick = () => {
     setClicked(!clicked);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const scrollDelta = 5; // Puedes ajustar este valor según sea necesario
+
+      if (Math.abs(prevScrollPos - currentScrollPos) > scrollDelta) {
+        setVisible(
+          currentScrollPos < prevScrollPos || currentScrollPos < scrollDelta
+        );
+        setPrevScrollPos(currentScrollPos);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
+
   return (
     <nav
       className={`py-2 flex items-center justify-between md:px-24 px-4 ${
         isDarkMode ? "bg-primaryDark borderBottomDark" : "bg-secondaryLight"
-      }`}
+      } ${visible ? "fixed w-full top-0 z-20" : ""} `}
     >
       <div className="z-20">
         <Toggle />
@@ -94,6 +138,7 @@ const Navbar = () => {
 export default Navbar;
 
 const NavConteiner = styled.nav`
+  position: relative;
   .links {
     z-index: 10;
     position: absolute;
@@ -114,8 +159,9 @@ const NavConteiner = styled.nav`
   }
 
   .links.active {
+    position: fixed;
     width: 100%;
-    position: absolute;
+    /* position: absolute; */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -130,7 +176,7 @@ const NavConteiner = styled.nav`
   }
 `;
 const BgMenu = styled.div`
-  position: absolute;
+  position: fixed;
   background: ${(props) => (props.isDarkMode ? "#272329" : "#252525")};
   top: -1000px;
   left: -1000px;
