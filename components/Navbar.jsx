@@ -9,30 +9,8 @@ import { useTheme } from "@/context/ThemeContext";
 const Navbar = () => {
   const { isDarkMode } = useTheme();
   const [clicked, setClicked] = useState(false);
-  // const [scrolling, setScrolling] = useState(false);
-
-  // const handleClick = () => {
-  //   setClicked(!clicked);
-  // };
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 0) {
-  //       setScrolling(true);
-  //     } else {
-  //       setScrolling(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
+  const [scrolling, setScrolling] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -40,14 +18,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const scrollDelta = 5; // Puedes ajustar este valor según sea necesario
-
-      if (Math.abs(prevScrollPos - currentScrollPos) > scrollDelta) {
-        setVisible(
-          currentScrollPos < prevScrollPos || currentScrollPos < scrollDelta
-        );
-        setPrevScrollPos(currentScrollPos);
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
       }
     };
 
@@ -56,13 +30,13 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, []);
 
   return (
     <nav
       className={`py-2 flex items-center justify-between md:px-24 px-4 ${
         isDarkMode ? "bg-primaryDark borderBottomDark" : "bg-secondaryLight"
-      } ${visible ? "fixed w-full top-0 z-20" : ""} `}
+      } ${scrolling ? "fixed w-full top-0 z-20" : ""} `}
     >
       <div className="z-20">
         <Toggle />

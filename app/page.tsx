@@ -41,6 +41,7 @@ export default function Home() {
           which has given me a solid background in information technology.
         </p>
         <br />
+        {/* <div className="w-80 h-40 border-2 border-solid rounded-lg border-black"></div> */}
         <br />
         <p>
           Every project is an opportunity to merge my technical skills with my
@@ -115,12 +116,7 @@ export default function Home() {
       <br />
       <br />
       <div className="my-10 flex justify-center space-x-4">
-        <MailButton
-          onClick={handleClick}
-          label="Drop me an email"
-          icon="send"
-          uppercase={false}
-        />
+        <MailButton label="Drop me an email" icon="send" uppercase={false} />
         <CopyButton label="copy" icon="copy" uppercase={false} />
       </div>
     </body>

@@ -1,13 +1,14 @@
 import React from "react";
 import { useTheme } from "@/context/ThemeContext";
+import Image from "next/image";
 
-const Project = () => {
+const Project = ({ title, content, imageSrc }) => {
   const { isDarkMode } = useTheme();
 
   return (
     <div className="flex flex-row mx-20 relative">
       <div
-        className={`mt-5 border-t-2 ${
+        className={`border-t-2 ${
           isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
         }`}
       >
@@ -17,18 +18,25 @@ const Project = () => {
               isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
             }`}
           >
-            Web3 Plataform
+            {title}
           </h2>
           <p
             className={`text-xl w-1/4 mx-10 ${
               isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
             }`}
           >
-            Decentralized platform that uses blockchain technology to allow
-            users to run crowdfunding campaigns without the need for traditional
-            financial intermediaries.
+            {content}
           </p>
-          <div className="bg-slate-800 w-2/5 ml-auto h-52 "></div>
+          <div className="bg-slate-800 relative w-full md:w-2/5 h-52 md:ml-auto">
+            <Image
+              src={imageSrc}
+              layout="fill"
+              objectFit="contain"
+              // width={300}
+              // height={300}
+              alt="Picture of the author"
+            />
+          </div>
         </div>
       </div>
     </div>
