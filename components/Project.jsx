@@ -6,28 +6,30 @@ const Project = ({ title, content, imageSrc }) => {
   const { isDarkMode } = useTheme();
 
   return (
-    <div className="flex flex-row mx-20 relative">
+    <div className="mx-20">
       <div
         className={`border-t-2 ${
           isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
         }`}
       >
-        <div className="flex flex-row my-5">
-          <h2
-            className={`text-3xl w-1/5 ${
-              isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-            }`}
-          >
-            {title}
-          </h2>
-          <p
-            className={`text-xl w-1/4 mx-10 ${
-              isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-            }`}
-          >
-            {content}
-          </p>
-          <div className="bg-slate-800 relative w-full md:w-2/5 h-52 md:ml-auto">
+        <div className="flex my-5">
+          <div className="flex flex-col lg:flex-row w-2/3 border-red-400 border-2">
+            <h2
+              className={`text-3xl border-2 border-white ${
+                isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+              }`}
+            >
+              {title}
+            </h2>
+            <p
+              className={`text-xl md:mx-0 mx-20 my-0 md:my-5 border-2 border-white ${
+                isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+              }`}
+            >
+              {content}
+            </p>
+          </div>
+          <div className="bg-slate-800 relative w-full md:w-2/5 h-52 md:ml-auto border-white border-2">
             <Image
               src={imageSrc}
               layout="fill"
