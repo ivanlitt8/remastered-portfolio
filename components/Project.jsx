@@ -36,7 +36,7 @@ const Project = ({ title, content, imageSrc }) => {
               objectFit="contain"
               // width={300}
               // height={300}
-              alt="Picture of the author"
+              alt="alt"
             />
           </div>
         </div>
