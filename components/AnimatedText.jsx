@@ -15,7 +15,7 @@ const AnimatedText = ({ text, place, dates, isVisible }) => {
     isVisible && (
       <animated.div
         style={props}
-        className="flex flex-row mx-52 space-x-2 my-5"
+        className="flex flex-row mx-10 md:mx-52 space-x-2 my-5"
       >
         <Icon
           iconName={"star"}

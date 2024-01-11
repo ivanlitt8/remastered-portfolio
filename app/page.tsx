@@ -10,6 +10,7 @@ import FilterContainer from "@/components/FilterContainer";
 import ProjectsContainer from "@/components/ProjectsContainer";
 import EducationGrid from "@/components/EducationGrid";
 import CopyButton from "@/components/CopyButton";
+import CustomTitle from "@/components/CustomTitle";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -19,15 +20,9 @@ export default function Home() {
   };
 
   return (
-    <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"}`}>
+    <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"} `}>
       <NavBar />
-      <h1
-        className={`text-8xl font-Mersad font-bold ml-20 mt-10 ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        FullStack UxUi Developer
-      </h1>
+      <CustomTitle title="FullStack UxUi Developer" />
       <br />
       <br />
       <div
@@ -60,48 +55,18 @@ export default function Home() {
           uppercase={true}
         />
       </div>
-      <h2
-        className={`text-8xl font-bold ml-20 mt-24 ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        Services
-      </h2>
+      <CustomTitle title="Services" />
       <CardContainer />
-      <h2
-        className={`text-8xl font-bold ml-20 mt-24 ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        Selected Projects
-      </h2>
+      <CustomTitle title="Selected Projects" />
       <FilterContainer />
       <ProjectsContainer />
-      <h2
-        className={`text-8xl font-bold ml-20 mt-24 ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        Technical Skills
-      </h2>
+      <CustomTitle title="Technical Skills" />
       <div className="flex mt-5 mx-20 flex-wrap justify-center">
         <IconList isDarkMode={isDarkMode} />
       </div>
-      <h2
-        className={`text-8xl font-bold ml-20 mt-24 ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        Education
-      </h2>
+      <CustomTitle title="Education" />
       <EducationGrid />
-      <h2
-        className={`text-8xl font-bold ml-20 mt-24 ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        Contact
-      </h2>
+      <CustomTitle title="Contact" />
       <br />
       <br />
       <p

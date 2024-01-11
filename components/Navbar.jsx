@@ -135,7 +135,6 @@ const NavConteiner = styled.nav`
   .links.active {
     position: fixed;
     width: 100%;
-    /* position: absolute; */
     display: block;
     margin-left: auto;
     margin-right: auto;

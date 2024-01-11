@@ -22,14 +22,14 @@ const Project = ({ title, content, imageSrc }) => {
               {title}
             </h2>
             <p
-              className={`text-xl md:mx-0 mx-20 my-0 md:my-5 border-2 border-white ${
+              className={`md:text-xl text-sm lg:mx-10 md:mx-0 my-0 md:my-5 border-2 border-white ${
                 isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
               }`}
             >
               {content}
             </p>
           </div>
-          <div className="bg-slate-800 relative w-full md:w-2/5 h-52 md:ml-auto border-white border-2">
+          <div className="bg-slate-800 relative md:w-2/5 w-2/3 md:ml-auto h-52 border-white border-2">
             <Image
               src={imageSrc}
               layout="fill"
