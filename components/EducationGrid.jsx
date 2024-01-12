@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Icon from "./Icon";
 import { useTheme } from "@/context/ThemeContext";
 import AnimatedText from "./AnimatedText";
@@ -7,6 +7,18 @@ import EducationTitle from "./EducationTitle";
 
 const EducationGrid = () => {
   const { isDarkMode } = useTheme();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const [sectionVisibility, setSectionVisibility] = useState({
     academicStudies: false,
@@ -22,6 +34,7 @@ const EducationGrid = () => {
 
   return (
     <div className="flex flex-col">
+      {/* sm:bg-green-500 md:bg-yellow-500 lg:bg-orange-500 xl:bg-red-500 */}
       <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
         <EducationTitle title="Academic Studies" />
         <div
@@ -31,7 +44,7 @@ const EducationGrid = () => {
           <Icon
             iconName={sectionVisibility["academicStudies"] ? "minus" : "plus"}
             color={isDarkMode ? "#C1CCD6" : "#545454"}
-            size={50}
+            size={windowWidth < 640 ? 35 : 50}
           />
         </div>
       </div>
@@ -65,7 +78,7 @@ const EducationGrid = () => {
           <Icon
             iconName={sectionVisibility["courses"] ? "minus" : "plus"}
             color={isDarkMode ? "#C1CCD6" : "#545454"}
-            size={50}
+            size={windowWidth < 640 ? 35 : 50}
           />
         </div>
       </div>
@@ -99,7 +112,7 @@ const EducationGrid = () => {
           <Icon
             iconName={sectionVisibility["languages"] ? "minus" : "plus"}
             color={isDarkMode ? "#C1CCD6" : "#545454"}
-            size={50}
+            size={windowWidth < 640 ? 35 : 50}
           />
         </div>
       </div>

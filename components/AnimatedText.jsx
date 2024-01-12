@@ -25,7 +25,7 @@ const AnimatedText = ({ text, place, dates, isVisible }) => {
         <div
           className={`${
             isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-          }`}
+          } text-xs sm:text-base`}
         >
           <h2>{text}</h2>
           <h2>{place}</h2>

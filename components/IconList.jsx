@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Icon from "./Icon"; // Asegúrate de importar correctamente el componente Icon
 
 const iconData = [
@@ -17,17 +17,30 @@ const iconData = [
 ];
 
 const IconList = ({ isDarkMode }) => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="flex mt-5 flex-wrap justify-center">
       {iconData.map((icon, index) => (
-        <div key={index} className="text-center m-3">
+        <div key={index} className="text-center m-3 flex flex-col items-center">
           <Icon
             iconName={icon.name}
             color={isDarkMode ? icon.color : "#545454"}
-            size={150}
+            size={windowWidth < 640 ? 60 : 150}
           />
           <div
-            className={`mt-2 font-medium capitalize text-xl ${
+            className={`mt-2 font-medium capitalize text-sm sm:text-xl ${
               isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
             } `}
           >

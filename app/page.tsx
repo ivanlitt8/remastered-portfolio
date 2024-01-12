@@ -11,6 +11,7 @@ import ProjectsContainer from "@/components/ProjectsContainer";
 import EducationGrid from "@/components/EducationGrid";
 import CopyButton from "@/components/CopyButton";
 import CustomTitle from "@/components/CustomTitle";
+import CustomParagraph from "@/components/CustomParagraph";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -25,28 +26,20 @@ export default function Home() {
       <CustomTitle title="FullStack UxUi Developer" />
       <br />
       <br />
-      <div
-        className={`mx-20 text-xl font-medium ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        <p>
-          Welcome to my digital world! I am Ivan, a hybrid web developer with
+      <CustomParagraph
+        text="Welcome to my digital world! I am Ivan, a hybrid web developer with
           experience in several key areas. I am currently studying ICT Analyst,
-          which has given me a solid background in information technology.
-        </p>
-        <br />
-        {/* <div className="w-80 h-40 border-2 border-solid rounded-lg border-black"></div> */}
-        <br />
-        <p>
-          Every project is an opportunity to merge my technical skills with my
-          boundless creativity, as well as to rigorously apply logic and problem
-          solving. In my portfolio, you can explore examples of projects that
-          reflect this unique combination of skills. I invite you to explore my
-          portfolio and download my CV to learn more about my experience and
-          past projects - I hope you enjoy exploring my work!
-        </p>
-      </div>
+          which has given me a solid background in information technology."
+      />
+      <br />
+      <CustomParagraph
+        text="Every project is an opportunity to merge my technical skills with my
+        boundless creativity, as well as to rigorously apply logic and problem
+        solving. In my portfolio, you can explore examples of projects that
+        reflect this unique combination of skills. I invite you to explore my
+        portfolio and download my CV to learn more about my experience and
+        past projects - I hope you enjoy exploring my work!"
+      />
       <div className="my-10 flex justify-center">
         <CvButton
           onClick={handleClick}
@@ -61,7 +54,7 @@ export default function Home() {
       <FilterContainer />
       <ProjectsContainer />
       <CustomTitle title="Technical Skills" />
-      <div className="flex mt-5 mx-20 flex-wrap justify-center">
+      <div className="flex mt-5 mx-5 sm:mx-20 flex-wrap justify-center">
         <IconList isDarkMode={isDarkMode} />
       </div>
       <CustomTitle title="Education" />
@@ -69,15 +62,11 @@ export default function Home() {
       <CustomTitle title="Contact" />
       <br />
       <br />
-      <p
-        className={`mx-20 text-xl font-medium ${
-          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-        }`}
-      >
-        Do you have a question or an idea in mind? I am here to help you! Feel
+      <CustomParagraph
+        text="Do you have a question or an idea in mind? I am here to help you! Feel
         free to contact me via email. I look forward to hearing your thoughts
-        and collaborating on your next project.
-      </p>
+        and collaborating on your next project."
+      />
       <br />
       <br />
       <div className="my-10 flex justify-center space-x-4">

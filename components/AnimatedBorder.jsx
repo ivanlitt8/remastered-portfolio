@@ -12,7 +12,7 @@ const AnimatedBorder = ({ isDarkMode, isVisible }) => {
 
   return (
     isVisible && (
-      <div className="mx-52">
+      <div className="mx-20 sm:mx-52">
         <animated.div style={animatedStyles}></animated.div>
       </div>
     )
