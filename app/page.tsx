@@ -17,7 +17,7 @@ export default function Home() {
   const { isDarkMode } = useTheme();
 
   const handleClick = () => {
-    console.log("Botón clickeado desde App");
+    // console.log("Botón clickeado desde App");
   };
 
   return (

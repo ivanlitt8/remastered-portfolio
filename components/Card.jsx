@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Icon from "./Icon";
 import { useTheme } from "@/context/ThemeContext";
 
 const Card = ({ number, title, name, content }) => {
   const { isDarkMode } = useTheme();
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div className="mx-auto py-2">
       <div className="cursor-pointer group perspective max-w-xs overflow-hidden w-44 h-full">
@@ -27,7 +41,7 @@ const Card = ({ number, title, name, content }) => {
               <Icon
                 iconName={name}
                 color={isDarkMode ? "#C1CCD6" : "#252525"}
-                size={120}
+                size={windowWidth < 640 ? 80 : 120}
               />
             </div>
             <div className="text-center mt-8">
