@@ -54,22 +54,18 @@ export default function Home() {
       <FilterContainer />
       <ProjectsContainer />
       <CustomTitle title="Technical Skills" />
-      <div className="flex mt-5 mx-5 sm:mx-20 flex-wrap justify-center">
+      <div className="flex mt-5 mx-2 sm:mx-20 flex-wrap justify-center">
         <IconList isDarkMode={isDarkMode} />
       </div>
       <CustomTitle title="Education" />
       <EducationGrid />
       <CustomTitle title="Contact" />
-      <br />
-      <br />
       <CustomParagraph
         text="Do you have a question or an idea in mind? I am here to help you! Feel
         free to contact me via email. I look forward to hearing your thoughts
         and collaborating on your next project."
       />
-      <br />
-      <br />
-      <div className="my-10 flex justify-center space-x-4">
+      <div className="my-10 mx-5 flex justify-center space-x-4">
         <MailButton label="Drop me an email" icon="send" uppercase={false} />
         <CopyButton label="copy" icon="copy" uppercase={false} />
       </div>

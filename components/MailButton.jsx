@@ -19,7 +19,7 @@ const MailButton = ({ label, icon, uppercase }) => {
       } border-2 font-medium py-2 px-4 rounded-3xl`}
     >
       <span
-        className={`flex items-center text-3xl mx-10 ${
+        className={`flex items-center sm:text-3xl text-lg sm:mx-10 mx-2 ${
           uppercase ? "uppercase" : "normal-case"
         }`}
       >

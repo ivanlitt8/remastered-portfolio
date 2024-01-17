@@ -11,7 +11,7 @@ const Filter = ({ id, label, onFilterClick, activeFilter }) => {
 
   const getButtonStyle = () => {
     const baseStyle =
-      "border-2 rounded-full cursor-pointer w-20 text-center text-lg font-medium uppercase";
+      "border-2 rounded-full cursor-pointer sm:w-20 w-16 mt-5 text-center sm:text-lg text-sm font-medium uppercase";
 
     return id === activeFilter
       ? isDarkMode

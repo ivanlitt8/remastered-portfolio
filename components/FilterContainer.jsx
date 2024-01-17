@@ -9,7 +9,7 @@ const FilterContainer = () => {
   };
 
   return (
-    <div className="flex mx-20">
+    <div className="flex sm:mx-20 mx-5">
       <div className="ml-auto flex space-x-2">
         <Filter
           id="filter1"
