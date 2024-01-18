@@ -81,18 +81,22 @@ const Navbar = () => {
             {/* Iconos a la derecha */}
             <div className="flex items-center space-x-4">
               <div className="hover:scale-125 transition-all cursor-pointer duration-500 hover:px-2">
-                <Icon
-                  iconName="github"
-                  color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
-                  size={30}
-                />
+                <a href="https://github.com/ivanlitt8">
+                  <Icon
+                    iconName="github"
+                    color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
+                    size={30}
+                  />
+                </a>
               </div>
               <div className="hover:scale-125 transition-all cursor-pointer duration-500 hover:px-2">
-                <Icon
-                  iconName="linkedin"
-                  color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
-                  size={30}
-                ></Icon>
+                <a href="https://www.linkedin.com/in/ivan-litt/">
+                  <Icon
+                    iconName="linkedin"
+                    color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
+                    size={30}
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const CardContainer = () => {
   return (
-    <div className="flex flex-wrap mx-20 justify-center mt-5">
+    <div className="flex flex-wrap sm:mx-20 mx-5 justify-center mt-5">
       <Card
         number={"1."}
         title="Desing"

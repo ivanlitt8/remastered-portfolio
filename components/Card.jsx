@@ -31,7 +31,7 @@ const Card = ({ number, title, name, content }) => {
           {/* FRONT */}
           <div className="backface-hidden">
             <div
-              className={`text-xl font-bold ${
+              className={`text-base sm:text-xl font-bold ${
                 isDarkMode ? "text-secondaryDark" : "text-colorLight"
               }`}
             >
@@ -41,7 +41,7 @@ const Card = ({ number, title, name, content }) => {
               <Icon
                 iconName={name}
                 color={isDarkMode ? "#C1CCD6" : "#252525"}
-                size={windowWidth < 640 ? 70 : 120}
+                size={windowWidth < 640 ? 80 : 120}
               />
             </div>
             <div className="text-center mt-8">
@@ -57,7 +57,7 @@ const Card = ({ number, title, name, content }) => {
           {/* BACK */}
           <div className="absolute top-0 backface-hidden my-rotate-y-180 p-2">
             <div
-              className={`text-xl font-bold mb-2 ${
+              className={`text-base sm:text-xl font-bold mb-2 ${
                 isDarkMode ? "text-secondaryDark" : "text-colorLight"
               }`}
             >
@@ -65,7 +65,7 @@ const Card = ({ number, title, name, content }) => {
             </div>
             <div className="text-center">
               <p
-                className={`text-sm font-bold px-1 ${
+                className={`text-xs sm:text-sm font-bold px-1 ${
                   isDarkMode ? "text-secondaryDark" : "text-colorLight"
                 }`}
               >
