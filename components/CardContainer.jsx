@@ -3,7 +3,7 @@ import Card from "./Card";
 
 const CardContainer = () => {
   return (
-    <div className="flex flex-wrap sm:mx-20 mx-5 justify-center mt-5">
+    <div className="flex flex-wrap sm:mx-20 mx-2 justify-center mt-5">
       <Card
         number={"1."}
         title="Desing"
@@ -17,7 +17,7 @@ const CardContainer = () => {
         title="Frontend"
         name={"carbon"}
         content={
-          "Creation of attractive and functional visual interfaces. Specialized in translating creative designs into intuitive user experiences"
+          "Creation of attractive and functional visual interfaces. Specialized in translating creative designs into intuitive user experiences."
         }
       />
       <Card

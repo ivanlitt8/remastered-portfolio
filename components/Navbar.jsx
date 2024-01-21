@@ -10,7 +10,7 @@ const Navbar = () => {
   const { isDarkMode } = useTheme();
   const [clicked, setClicked] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  // const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -57,7 +57,7 @@ const Navbar = () => {
               <span>About</span>
             </Link>
             <Link
-              href="/contact"
+              href="#contact"
               className="transition-all transform hover:scale-125 hover:px-3  duration-500"
               onClick={handleClick}
             >

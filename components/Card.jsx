@@ -20,7 +20,7 @@ const Card = ({ number, title, name, content }) => {
 
   return (
     <div className="mx-auto py-2">
-      <div className="cursor-pointer group perspective max-w-xs overflow-hidden w-44 sm:w-44 h-full">
+      <div className="cursor-pointer group perspective max-w-xs overflow-hidden w-[150px] sm:w-44 h-full">
         <div
           className={`relative p-2 border-solid border-2 preserve-3d group-hover:my-rotate-y-180 duration-1000 transition-all ${
             isDarkMode
@@ -55,7 +55,7 @@ const Card = ({ number, title, name, content }) => {
             </div>
           </div>
           {/* BACK */}
-          <div className="absolute top-0 backface-hidden my-rotate-y-180 p-2">
+          <div className="absolute top-0 backface-hidden my-rotate-y-180 p-1">
             <div
               className={`text-base sm:text-xl font-bold mb-2 ${
                 isDarkMode ? "text-secondaryDark" : "text-colorLight"

@@ -6,7 +6,7 @@ const CustomParagraph = ({ text }) => {
 
   return (
     <div
-      className={`mx-12 sm:mx-20 text-base sm:text-xl font-medium ${
+      className={`mx-5 sm:mx-20 text-base sm:text-xl font-medium ${
         isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
       }`}
     >

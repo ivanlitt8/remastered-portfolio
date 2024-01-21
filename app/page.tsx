@@ -59,7 +59,9 @@ export default function Home() {
       </div>
       <CustomTitle title="Education" />
       <EducationGrid />
-      <CustomTitle title="Contact" />
+      <div id="contact">
+        <CustomTitle title="Contact" />
+      </div>
       <CustomParagraph
         text="Do you have a question or an idea in mind? I am here to help you! Feel
         free to contact me via email. I look forward to hearing your thoughts
