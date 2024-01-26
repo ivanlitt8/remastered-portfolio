@@ -17,13 +17,15 @@ export default function Home() {
   const { isDarkMode } = useTheme();
 
   const handleClick = () => {
-    // console.log("Botón clickeado desde App");
+    console.log("Botón clickeado desde App");
   };
 
   return (
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"} `}>
       <NavBar />
-      <CustomTitle title="FullStack UxUi Developer" />
+      <div id="about" className="sm:pt-10 pt-16">
+        <CustomTitle title="FullStack UxUi Developer" />
+      </div>
       <br />
       <br />
       <CustomParagraph
@@ -48,9 +50,13 @@ export default function Home() {
           uppercase={true}
         />
       </div>
-      <CustomTitle title="Services" />
+      <div id="services" className="sm:pt-10 pt-16">
+        <CustomTitle title="Services" />
+      </div>
       <CardContainer />
-      <CustomTitle title="Selected Projects" />
+      <div id="projects" className="sm:pt-10 pt-16">
+        <CustomTitle title="Selected Projects" />
+      </div>
       <FilterContainer />
       <ProjectsContainer />
       <CustomTitle title="Technical Skills" />

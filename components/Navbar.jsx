@@ -10,33 +10,32 @@ const Navbar = () => {
   const { isDarkMode } = useTheme();
   const [clicked, setClicked] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  // const [prevScrollPos, setPrevScrollPos] = useState(0);
 
   const handleClick = () => {
     setClicked(!clicked);
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 0) {
+  //       setScrolling(true);
+  //     } else {
+  //       setScrolling(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <nav
-      className={`py-2 flex items-center justify-between md:px-24 px-4 ${
+      className={`py-2 flex items-center justify-between md:px-24 px-4 fixed w-full z-20 top-0 ${
         isDarkMode ? "bg-primaryDark borderBottomDark" : "bg-secondaryLight"
-      } ${scrolling ? "fixed w-full top-0 z-20" : ""} `}
+      }`}
     >
       <div className="z-20">
         <Toggle />
@@ -50,34 +49,41 @@ const Navbar = () => {
             } flex-col md:flex-row`}
           >
             <Link
-              href="/about"
+              href="#about"
               className="transition-all transform hover:scale-125 hover:px-3 duration-500"
-              onClick={handleClick}
+              onClick={() => {
+                setClicked(false);
+              }}
             >
               <span>About</span>
             </Link>
             <Link
               href="#contact"
               className="transition-all transform hover:scale-125 hover:px-3  duration-500"
-              onClick={handleClick}
+              onClick={() => {
+                setClicked(false);
+              }}
             >
               <span>Contact</span>
             </Link>
             <Link
-              href="/projects"
+              href="#projects"
               className="transition-all transform hover:scale-125 hover:px-3 duration-500"
-              onClick={handleClick}
+              onClick={() => {
+                setClicked(false);
+              }}
             >
               <span>Projects</span>
             </Link>
             <Link
-              href="/services"
+              href="#services"
               className="transition-all transform hover:scale-125 hover:px-3 duration-500"
-              onClick={handleClick}
+              onClick={() => {
+                setClicked(false);
+              }}
             >
               <span>Services</span>
             </Link>
-
             {/* Iconos a la derecha */}
             <div className="flex items-center space-x-4">
               <div className="hover:scale-125 transition-all cursor-pointer duration-500 hover:px-2">
