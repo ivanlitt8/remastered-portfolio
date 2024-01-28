@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import Icon from "./Icon";
 
-const CvButton = ({ onClick, label, icon, uppercase }) => {
+const CvButton = ({ label, icon, uppercase }) => {
   const { isDarkMode } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
 
+  const fileUrl =
+    "https://drive.google.com/file/d/1Wj2Nv4AK1ImXDaQqvwPqqxP7EiMj3UiL/view";
+  const downloadCv = () => {
+    window.open(fileUrl, "_blank");
+  };
+
   return (
     <button
-      onClick={onClick}
+      onClick={(event) => {
+        event.preventDefault();
+        downloadCv();
+      }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={` ${

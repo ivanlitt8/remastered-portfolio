@@ -54,12 +54,7 @@ export default function Home() {
         past projects - I hope you enjoy exploring my work!"
       />
       <div className="my-10 flex justify-center">
-        <CvButton
-          onClick={handleClick}
-          label="download cv"
-          icon="download"
-          uppercase={true}
-        />
+        <CvButton label="download cv" icon="download" uppercase={true} />
       </div>
       <div ref={servicesRef} className="sm:pt-10 pt-16 ">
         <CustomTitle title="Services" />

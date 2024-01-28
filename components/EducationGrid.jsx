@@ -1,24 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Icon from "./Icon";
 import { useTheme } from "@/context/ThemeContext";
 import AnimatedText from "./AnimatedText";
 import AnimatedBorder from "./AnimatedBorder";
 import EducationTitle from "./EducationTitle";
+import useWindowWidth from "@/customHooks/useWindowWidth";
 
 const EducationGrid = () => {
   const { isDarkMode } = useTheme();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const windowWidth = useWindowWidth();
 
   const [sectionVisibility, setSectionVisibility] = useState({
     academicStudies: false,
@@ -54,10 +44,7 @@ const EducationGrid = () => {
         dates={"2021 - present"}
         isVisible={sectionVisibility["academicStudies"]}
       />
-      <AnimatedBorder
-        isVisible={sectionVisibility["academicStudies"]}
-        isDarkMode={isDarkMode}
-      />
+      <AnimatedBorder isVisible={sectionVisibility["academicStudies"]} />
       <AnimatedText
         text={"Degree in computer science"}
         place={"Universidad Nacional de La Plata"}
@@ -88,10 +75,7 @@ const EducationGrid = () => {
         dates={"2021 - present"}
         isVisible={sectionVisibility["courses"]}
       />
-      <AnimatedBorder
-        isVisible={sectionVisibility["courses"]}
-        isDarkMode={isDarkMode}
-      />
+      <AnimatedBorder isVisible={sectionVisibility["courses"]} />
       <AnimatedText
         text={"Degree in computer science"}
         place={"Universidad Nacional de La Plata"}
@@ -120,10 +104,7 @@ const EducationGrid = () => {
         text={"Native: Spanish"}
         isVisible={sectionVisibility["languages"]}
       />
-      <AnimatedBorder
-        isVisible={sectionVisibility["languages"]}
-        isDarkMode={isDarkMode}
-      />
+      <AnimatedBorder isVisible={sectionVisibility["languages"]} />
       <AnimatedText
         text={"Others: English C1"}
         isVisible={sectionVisibility["languages"]}

@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 
 const Icon = ({ iconName, color, hoverColor, size, isHovered }) => {
   // Definir el objeto con los SVG

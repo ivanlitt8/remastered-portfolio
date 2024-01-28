@@ -1,7 +1,10 @@
 import React from "react";
+import { useTheme } from "@/context/ThemeContext";
 import { useSpring, animated } from "@react-spring/web";
 
-const AnimatedBorder = ({ isDarkMode, isVisible }) => {
+const AnimatedBorder = ({ isVisible }) => {
+  const { isDarkMode } = useTheme();
+
   const animatedStyles = useSpring({
     opacity: isVisible ? 1 : 0,
     borderBottom: isDarkMode ? "2px solid #C1CCD6" : "2px solid #545454",
