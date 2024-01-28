@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import { useTheme } from "@/context/ThemeContext";
+import useWindowWidth from "@/customHooks/useWindowWidth";
 import Icon from "./Icon"; // Asegúrate de importar correctamente el componente Icon
 
 const iconData = [
@@ -16,19 +17,10 @@ const iconData = [
   { name: "api", color: "#C1CCD6" },
 ];
 
-const IconList = ({ isDarkMode }) => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+const IconList = () => {
+  const windowWidth = useWindowWidth();
 
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const { isDarkMode } = useTheme();
 
   return (
     <div className="flex mt-5 flex-wrap justify-center">

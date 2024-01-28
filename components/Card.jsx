@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from "react";
+import useWindowWidth from "@/customHooks/useWindowWidth";
 import Icon from "./Icon";
 import { useTheme } from "@/context/ThemeContext";
 
 const Card = ({ number, title, name, content }) => {
   const { isDarkMode } = useTheme();
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  const windowWidth = useWindowWidth();
 
   return (
     <div className="mx-auto py-2">

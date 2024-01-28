@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef } from "react";
 import NavBar from "@/components/Navbar";
 import CardContainer from "@/components/CardContainer";
 import CvButton from "@/components/CvButton";
@@ -16,14 +17,24 @@ import CustomParagraph from "@/components/CustomParagraph";
 export default function Home() {
   const { isDarkMode } = useTheme();
 
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+  const projectsRef = useRef(null);
+  const servicesRef = useRef(null);
+
   const handleClick = () => {
     console.log("Botón clickeado desde App");
   };
 
   return (
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"} `}>
-      <NavBar />
-      <div id="about" className="sm:pt-10 pt-16">
+      <NavBar
+        aboutRef={aboutRef}
+        contactRef={contactRef}
+        projectsRef={projectsRef}
+        servicesRef={servicesRef}
+      />
+      <div ref={aboutRef} className="sm:pt-10 pt-16">
         <CustomTitle title="FullStack UxUi Developer" />
       </div>
       <br />
@@ -50,22 +61,22 @@ export default function Home() {
           uppercase={true}
         />
       </div>
-      <div id="services" className="sm:pt-10 pt-16">
+      <div ref={servicesRef} className="sm:pt-10 pt-16 ">
         <CustomTitle title="Services" />
       </div>
       <CardContainer />
-      <div id="projects" className="sm:pt-10 pt-16">
+      <div ref={projectsRef} className="sm:pt-10 pt-16 ">
         <CustomTitle title="Selected Projects" />
       </div>
       <FilterContainer />
       <ProjectsContainer />
       <CustomTitle title="Technical Skills" />
       <div className="flex mt-5 mx-2 sm:mx-20 flex-wrap justify-center">
-        <IconList isDarkMode={isDarkMode} />
+        <IconList />
       </div>
       <CustomTitle title="Education" />
       <EducationGrid />
-      <div id="contact">
+      <div ref={contactRef}>
         <CustomTitle title="Contact" />
       </div>
       <CustomParagraph

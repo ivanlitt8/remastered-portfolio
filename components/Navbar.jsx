@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Toggle from "./Toggle";
 import Icon from "./Icon";
@@ -6,30 +6,18 @@ import BurguerButton from "./BurguerButton";
 import styled from "styled-components";
 import { useTheme } from "@/context/ThemeContext";
 
-const Navbar = () => {
+const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
   const { isDarkMode } = useTheme();
   const [clicked, setClicked] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
 
   const handleClick = () => {
     setClicked(!clicked);
   };
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY > 0) {
-  //       setScrolling(true);
-  //     } else {
-  //       setScrolling(false);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
+  const scrollToRef = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+    setClicked(false);
+  };
 
   return (
     <nav
@@ -49,37 +37,41 @@ const Navbar = () => {
             } flex-col md:flex-row`}
           >
             <Link
-              href="#about"
+              href="#"
               className="transition-all transform hover:scale-125 hover:px-3 duration-500"
-              onClick={() => {
-                setClicked(false);
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToRef(aboutRef);
               }}
             >
               <span>About</span>
             </Link>
             <Link
-              href="#contact"
+              href="#"
               className="transition-all transform hover:scale-125 hover:px-3  duration-500"
-              onClick={() => {
-                setClicked(false);
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToRef(contactRef);
               }}
             >
               <span>Contact</span>
             </Link>
             <Link
-              href="#projects"
+              href="#"
               className="transition-all transform hover:scale-125 hover:px-3 duration-500"
-              onClick={() => {
-                setClicked(false);
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToRef(projectsRef);
               }}
             >
               <span>Projects</span>
             </Link>
             <Link
-              href="#services"
+              href="#"
               className="transition-all transform hover:scale-125 hover:px-3 duration-500"
-              onClick={() => {
-                setClicked(false);
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToRef(servicesRef);
               }}
             >
               <span>Services</span>
@@ -156,6 +148,7 @@ const NavConteiner = styled.nav`
       font-size: 2rem;
       line-height: 4rem;
     }
+    transition: top 0.5s ease;
   }
 `;
 const BgMenu = styled.div`
