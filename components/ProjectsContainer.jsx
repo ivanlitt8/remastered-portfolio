@@ -5,21 +5,25 @@ const ProjectsContainer = () => {
   return (
     <div className="mt-5">
       <Project
-        title={"Web3 Plataform"}
+        key={index}
+        type={"ux/ui"}
+        title={"Local Eyes"}
         content={
-          "Decentralized platform that uses blockchain technology to allow users to run crowdfunding campaigns without the need for traditional financial intermediaries."
+          "Redesign of the user interface of LocalEyez, a platform dedicated to suggesting local events and experiences personalized according to user interests."
         }
         imageSrc="/images/localEyes.png"
       />
       <Project
+        key={index}
+        type={"web"}
         title={"Web3 Plataform"}
         content={
           "Decentralized platform that uses blockchain technology to allow users to run crowdfunding campaigns without the need for traditional financial intermediaries."
         }
-        imageSrc="/images/dailyNosh.png"
+        imageSrc=""
       />
       <Project
-        title={"Web3 Plataform"}
+        title={"Quick Bus"}
         content={
           "Decentralized platform that uses blockchain technology to allow users to run crowdfunding campaigns without the need for traditional financial intermediaries."
         }
