@@ -8,7 +8,6 @@ import { useTheme } from "@/context/ThemeContext";
 import IconList from "@/components/IconList";
 import MailButton from "@/components/MailButton";
 import FilterContainer from "@/components/FilterContainer";
-import ProjectsContainer from "@/components/ProjectsContainer";
 import EducationGrid from "@/components/EducationGrid";
 import CopyButton from "@/components/CopyButton";
 import CustomTitle from "@/components/CustomTitle";
@@ -64,7 +63,6 @@ export default function Home() {
         <CustomTitle title="Selected Projects" />
       </div>
       <FilterContainer />
-      <ProjectsContainer />
       <CustomTitle title="Technical Skills" />
       <div className="flex mt-5 mx-2 sm:mx-20 flex-wrap justify-center">
         <IconList />
