@@ -3,7 +3,7 @@ import Filter from "./Filter";
 import ProjectsContainer from "./ProjectsContainer";
 
 const FilterContainer = () => {
-  const [activeFilter, setActiveFilter] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("all");
 
   const handleFilterClick = (filterId) => {
     setActiveFilter(filterId);
@@ -14,19 +14,19 @@ const FilterContainer = () => {
       <div className="flex sm:mx-20 mx-5">
         <div className="ml-auto flex space-x-2">
           <Filter
-            id="filter1"
+            id="ux/ui"
             label="ux/ui"
             onFilterClick={handleFilterClick}
             activeFilter={activeFilter}
           />
           <Filter
-            id="filter2"
+            id="web"
             label="web"
             onFilterClick={handleFilterClick}
             activeFilter={activeFilter}
           />
           <Filter
-            id="filter3"
+            id="all"
             label="all"
             onFilterClick={handleFilterClick}
             activeFilter={activeFilter}

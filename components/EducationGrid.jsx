@@ -51,6 +51,7 @@ const EducationGrid = () => {
         dates={"2023 - present"}
         isVisible={sectionVisibility["academicStudies"]}
       />
+
       <div
         className={`border-b border-2 mx-12 sm:mx-20 ${
           isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
@@ -70,16 +71,30 @@ const EducationGrid = () => {
         </div>
       </div>
       <AnimatedText
-        text={"ITC Analyst"}
-        place={"Universidad Nacional de La Plata"}
-        dates={"2021 - present"}
+        text={"UX/UI Course"}
+        place={"OpenBootcamp"}
+        dates={"March 2023 - September 2023"}
         isVisible={sectionVisibility["courses"]}
       />
       <AnimatedBorder isVisible={sectionVisibility["courses"]} />
       <AnimatedText
-        text={"Degree in computer science"}
-        place={"Universidad Nacional de La Plata"}
-        dates={"2023 - present"}
+        text={"Google Analytics Certification"}
+        place={"Skillshop"}
+        dates={"March 2023"}
+        isVisible={sectionVisibility["courses"]}
+      />
+      <AnimatedBorder isVisible={sectionVisibility["courses"]} />
+      <AnimatedText
+        text={"Full Stack Web Course"}
+        place={"#YoProgramo"}
+        dates={"November 2021 - June 2022"}
+        isVisible={sectionVisibility["courses"]}
+      />
+      <AnimatedBorder isVisible={sectionVisibility["courses"]} />
+      <AnimatedText
+        text={"Javascript Master"}
+        place={"Udemy"}
+        dates={"June 2020 - September 2020"}
         isVisible={sectionVisibility["courses"]}
       />
       <div

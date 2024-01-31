@@ -27,7 +27,7 @@ const AnimatedText = ({ text, place, dates, isVisible }) => {
             isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
           } text-xs sm:text-base`}
         >
-          <h2>{text}</h2>
+          <h2 className="font-extrabold text-base sm:text-xl">{text}</h2>
           <h2>{place}</h2>
           <h2>{dates}</h2>
         </div>
