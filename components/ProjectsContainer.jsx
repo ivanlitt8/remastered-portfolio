@@ -47,7 +47,7 @@ const ProjectsContainer = ({ activeFilter }) => {
     },
     {
       type: "web",
-      title: "Dashboard",
+      title: "Dash Board",
       content:
         "A visual tool that enables users to monitor and analyze real-time data related to cryptocurrencies, using an API.",
       imageSrc: "/images/localEyes.png",
