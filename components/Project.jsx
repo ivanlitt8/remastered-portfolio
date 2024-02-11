@@ -20,7 +20,6 @@ const Project = ({ title, content, imageSrc }) => {
               }`}
             >
               {title}
-              {/* ACA VA UN WIDTH */}
             </h2>
             <p
               className={`md:text-xl sm:text-sm text-xs lg:mx-10 md:mx-0 my-0 md:my-5 sm:w-4/5 w-auto ${
@@ -31,14 +30,7 @@ const Project = ({ title, content, imageSrc }) => {
             </p>
           </div>
           <div className="bg-slate-800 relative md:w-2/5 w-2/3 md:ml-auto h-52">
-            <Image
-              src={imageSrc}
-              layout="fill"
-              objectFit="contain"
-              // width={300}
-              // height={300}
-              alt="alt"
-            />
+            <Image src={imageSrc} layout="fill" objectFit="contain" alt="alt" />
           </div>
         </div>
       </div>
