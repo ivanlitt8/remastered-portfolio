@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@/context/ThemeContext";
 import Image from "next/image";
 
-const Project = ({ title, content, imageSrc }) => {
+const Project = ({ title, content, imageSrc, link }) => {
   const { isDarkMode } = useTheme();
 
   return (
@@ -21,15 +21,18 @@ const Project = ({ title, content, imageSrc }) => {
             >
               {title}
             </h2>
-            <p
-              className={`md:text-xl sm:text-sm text-xs lg:mx-10 md:mx-0 my-0 md:my-5 sm:w-4/5 w-auto ${
-                isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
-              }`}
-            >
-              {content}
-            </p>
+            <div className="lg:mx-10 md:mx-0 my-0 md:my-5 sm:w-4/5 w-auto">
+              <p
+                className={`md:text-xl sm:text-sm text-xs mb-5 ${
+                  isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+                }`}
+              >
+                {content}
+              </p>
+              <a href={link}>View more &gt;</a>
+            </div>
           </div>
-          <div className="bg-slate-800 relative md:w-2/5 w-2/3 md:ml-auto h-52">
+          <div className="relative md:w-2/5 w-2/3 md:ml-auto h-52">
             <Image src={imageSrc} layout="fill" objectFit="contain" alt="alt" />
           </div>
         </div>
