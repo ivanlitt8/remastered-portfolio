@@ -29,7 +29,9 @@ const Project = ({ title, content, imageSrc, link }) => {
               >
                 {content}
               </p>
-              <a href={link}>View more &gt;</a>
+              <a href={link} className="underline">
+                View more &gt;
+              </a>
             </div>
           </div>
           <div className="relative md:w-2/5 w-2/3 md:ml-auto h-52">
