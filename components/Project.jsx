@@ -29,7 +29,12 @@ const Project = ({ title, content, imageSrc, link }) => {
               >
                 {content}
               </p>
-              <a href={link} className="underline">
+              <a
+                href={link}
+                className={`underline ${
+                  isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+                }`}
+              >
                 View more &gt;
               </a>
             </div>
