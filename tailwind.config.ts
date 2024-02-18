@@ -1,8 +1,10 @@
 import type { Config } from 'tailwindcss'
 
+type UtilitiesFunction = (utilities: Record<string, any>) => void;
+
 const plugin = require("tailwindcss/plugin");
 
-const Myclass = plugin(function({ addUtilities }) {
+const Myclass = plugin(function({ addUtilities }: { addUtilities: UtilitiesFunction }){
   addUtilities({
     ".my-rotate-y-180":{
       transform: "rotateY(180deg)",
