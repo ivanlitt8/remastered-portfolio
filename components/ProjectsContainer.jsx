@@ -41,7 +41,7 @@ const ProjectsContainer = ({ activeFilter }) => {
       content:
         "User experience for My Daily Nosh, a meal planning app with features including collaborative shopping lists, smart ingredient scanning, and personalized recipe recommendations. Simplifies food preparation and makes it easy to connect with other food lovers.",
       imageSrc: "/images/dailyNosh.png",
-      link: "",
+      link: "https://drive.google.com/file/d/1wcEp5EwADpshmNwUWP3m780PGbRvtx1s/view",
     },
     {
       type: "web",
