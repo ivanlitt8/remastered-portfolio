@@ -25,7 +25,7 @@ const ProjectsContainer = ({ activeFilter }) => {
       content:
         "Development of a bus travel application that facilitates trip planning, focused on creating an intuitive and friendly user experience.",
       imageSrc: "/images/quickBus.png",
-      link: "",
+      link: "https://drive.google.com/file/d/1yHFXrmpeb8ZVYy84uJUCF-ph3gDsUFdw/view",
     },
     {
       type: "web",
