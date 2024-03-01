@@ -12,6 +12,8 @@ import EducationGrid from "@/components/EducationGrid";
 import CopyButton from "@/components/CopyButton";
 import CustomTitle from "@/components/CustomTitle";
 import CustomParagraph from "@/components/CustomParagraph";
+import BrowserFrameworkFilled from "@/components/BrowserFrameworkFilled";
+import BrowserFramework from "@/components/BrowserFramework";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -44,6 +46,11 @@ export default function Home() {
           which has given me a solid background in information technology."
       />
       <br />
+      <div className="mx-20">
+        <BrowserFrameworkFilled />
+        <BrowserFramework />
+        <BrowserFrameworkFilled />
+      </div>
       <CustomParagraph
         text="Every project is an opportunity to merge my technical skills with my
         boundless creativity, as well as to rigorously apply logic and problem
