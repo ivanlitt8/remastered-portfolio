@@ -46,11 +46,12 @@ export default function Home() {
           which has given me a solid background in information technology."
       />
       <br />
-      <div className="mx-20">
+      {/* <div className="mx-2 sm:mx-20 space-x-5 flex items-center justify-center">
         <BrowserFrameworkFilled />
         <BrowserFramework />
         <BrowserFrameworkFilled />
-      </div>
+      </div> */}
+      <br />
       <CustomParagraph
         text="Every project is an opportunity to merge my technical skills with my
         boundless creativity, as well as to rigorously apply logic and problem
