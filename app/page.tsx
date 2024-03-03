@@ -36,7 +36,7 @@ export default function Home() {
         servicesRef={servicesRef}
       />
       <div ref={aboutRef} className="sm:pt-10 pt-16">
-        <CustomTitle title="FullStack UxUi Developer" />
+        <CustomTitle title="Frontend UxUi Developer" />
       </div>
       <br />
       <br />
@@ -50,8 +50,8 @@ export default function Home() {
         <BrowserFrameworkFilled />
         <BrowserFramework />
         <BrowserFrameworkFilled />
-      </div> */}
-      <br />
+      </div>
+      <br /> */}
       <CustomParagraph
         text="Every project is an opportunity to merge my technical skills with my
         boundless creativity, as well as to rigorously apply logic and problem
