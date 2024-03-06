@@ -12,8 +12,8 @@ import EducationGrid from "@/components/EducationGrid";
 import CopyButton from "@/components/CopyButton";
 import CustomTitle from "@/components/CustomTitle";
 import CustomParagraph from "@/components/CustomParagraph";
-import BrowserFrameworkFilled from "@/components/BrowserFrameworkFilled";
-import BrowserFramework from "@/components/BrowserFramework";
+// import BrowserFrameworkFilled from "@/components/BrowserFrameworkFilled";
+// import BrowserFramework from "@/components/BrowserFramework";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
