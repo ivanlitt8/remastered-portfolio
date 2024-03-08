@@ -14,6 +14,7 @@ import CustomTitle from "@/components/CustomTitle";
 import CustomParagraph from "@/components/CustomParagraph";
 // import BrowserFrameworkFilled from "@/components/BrowserFrameworkFilled";
 // import BrowserFramework from "@/components/BrowserFramework";
+import { useTranslation } from "next-i18next";
 
 export default function Home() {
   const { isDarkMode } = useTheme();
@@ -27,6 +28,8 @@ export default function Home() {
     console.log("Botón clickeado desde App");
   };
 
+  const { t } = useTranslation();
+
   return (
     <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"} `}>
       <NavBar
@@ -37,6 +40,7 @@ export default function Home() {
       />
       <div ref={aboutRef} className="sm:pt-10 pt-16">
         <CustomTitle title="Frontend UxUi Developer" />
+        <span>{t("titles.services")}</span>
       </div>
       <br />
       <br />

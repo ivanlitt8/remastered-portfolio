@@ -6,7 +6,7 @@ const CardContainer = () => {
     <div className="flex flex-wrap sm:mx-20 mx-2 justify-center mt-5">
       <Card
         number={"1."}
-        title="Desing"
+        title="Design"
         name={"letter"}
         content={
           "Design is the fusion of aesthetics and function to create visually striking and effective experiences."

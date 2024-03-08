@@ -1,6 +1,9 @@
+"use client";
+
 import "./globals.css";
 import { ReactNode } from "react";
 import { ThemeProvider } from "@/context/ThemeContext";
+import "../next-i18next.config";
 
 type RootLayoutProps = {
   children: ReactNode;
@@ -8,7 +11,7 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="es">
       <ThemeProvider>{children}</ThemeProvider>
     </html>
   );
