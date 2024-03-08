@@ -10,6 +10,7 @@
     "services": "Services",
     "projects": "Selected Projects",
     "skills": "Technical Skills",
+    "education": "Education",
     "contact": "Contact"
   },
   "paragraphs": {
@@ -21,38 +22,44 @@
       "Do you have a question or an idea in mind? I am here to help you! Feel free to contact me via email. I look forward to hearing your thoughts and collaborating on your next project."
   },
   "cv": "download cv",
-  "flip-cards": {
-    "design": {
+  "flip-cards": [
+    {
       "title": "Design",
       "number": "1.",
+      "name": "letter",
       "text": "Design is the fusion of aesthetics and function to create visually striking and effective experiences."
     },
-    "frontend": {
+    {
       "title": "Frontend",
       "number": "2.",
+      "name": "carbon",
       "text": "Creation of attractive and functional visual interfaces. Specialized in translating creative designs into intuitive user experiences."
     },
-    "backend": {
+    {
       "title": "Backend",
       "number": "3.",
+      "name": "chip",
       "text": "Construction of a robust server logic, dedicated to data processing and communication between the frontend and the database."
     },
-    "deployd": {
+    {
       "title": "Deployd",
       "number": "4.",
+      "name": "deploy",
       "text": "Efficient deployment of solutions, ensuring rapid and effective implementation of services and applications."
     },
-    "data-base": {
+    {
       "title": "Data Base",
       "number": "5.",
+      "name": "database",
       "text": "Creation and management of databases for efficient storage and retrieval, ensuring a coherent and reliable flow of information."
     },
-    "maintenance": {
+    {
       "title": "Maintenance",
       "number": "6.",
+      "name":"wrench",
       "text": "Updates, fixes and optimizations to ensure a smooth experience and optimal performance in web environments."
     }
-  },
+  ],
   "projects-cards": {
     "card1": {
       "title": "Web3 Platform",
@@ -92,6 +99,7 @@
     }
   },
   "mail": "Drop me an email",
+  "copy": "copy",
   "education-cards": {
     "Academic": {
       "card1": {

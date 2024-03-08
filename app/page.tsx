@@ -39,16 +39,11 @@ export default function Home() {
         servicesRef={servicesRef}
       />
       <div ref={aboutRef} className="sm:pt-10 pt-16">
-        <CustomTitle title="Frontend UxUi Developer" />
-        <span>{t("titles.services")}</span>
+        <CustomTitle title={t("titles.landing")} />
       </div>
       <br />
       <br />
-      <CustomParagraph
-        text="Welcome to my digital world! I am Ivan, a hybrid web developer with
-          experience in several key areas. I am currently studying ICT Analyst,
-          which has given me a solid background in information technology."
-      />
+      <CustomParagraph text={t("paragraphs.first")} />
       <br />
       {/* <div className="mx-2 sm:mx-20 space-x-5 flex items-center justify-center">
         <BrowserFrameworkFilled />
@@ -56,42 +51,31 @@ export default function Home() {
         <BrowserFrameworkFilled />
       </div>
       <br /> */}
-      <CustomParagraph
-        text="Every project is an opportunity to merge my technical skills with my
-        boundless creativity, as well as to rigorously apply logic and problem
-        solving. In my portfolio, you can explore examples of projects that
-        reflect this unique combination of skills. I invite you to explore my
-        portfolio and download my CV to learn more about my experience and
-        past projects - I hope you enjoy exploring my work!"
-      />
+      <CustomParagraph text={t("paragraphs.first")} />
       <div className="my-10 flex justify-center">
-        <CvButton label="download cv" icon="download" uppercase={true} />
+        <CvButton label={t("cv")} icon="download" uppercase={true} />
       </div>
       <div ref={servicesRef} className="sm:pt-10 pt-16 ">
-        <CustomTitle title="Services" />
+        <CustomTitle title={t("titles.services")} />
       </div>
       <CardContainer />
       <div ref={projectsRef} className="sm:pt-10 pt-16 ">
-        <CustomTitle title="Selected Projects" />
+        <CustomTitle title={t("titles.projects")} />
       </div>
       <FilterContainer />
-      <CustomTitle title="Technical Skills" />
+      <CustomTitle title={t("titles.skills")} />
       <div className="flex mt-5 mx-2 sm:mx-20 flex-wrap justify-center">
         <IconList />
       </div>
-      <CustomTitle title="Education" />
+      <CustomTitle title={t("titles.education")} />
       <EducationGrid />
       <div ref={contactRef}>
-        <CustomTitle title="Contact" />
+        <CustomTitle title={t("titles.contact")} />
       </div>
-      <CustomParagraph
-        text="Do you have a question or an idea in mind? I am here to help you! Feel
-        free to contact me via email. I look forward to hearing your thoughts
-        and collaborating on your next project."
-      />
+      <CustomParagraph text={t("paragraphs.third")} />
       <div className="my-10 mx-5 flex justify-center space-x-4">
-        <MailButton label="Drop me an email" icon="send" uppercase={false} />
-        <CopyButton label="copy" icon="copy" uppercase={false} />
+        <MailButton label={t("mail")} icon="send" uppercase={false} />
+        <CopyButton label={t("copy")} icon="copy" uppercase={false} />
       </div>
     </body>
   );

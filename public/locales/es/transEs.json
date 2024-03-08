@@ -10,6 +10,7 @@
     "services": "Servicios",
     "projects": "Proyectos Destacados",
     "skills": "Habilidades Técnicas",
+    "education": "Educacion",
     "contact": "Contacto"
   },
   "paragraphs": {
@@ -21,38 +22,44 @@
       "¿Tiene alguna pregunta o idea en mente? ¡Estoy aquí para ayudarte! No dude en ponerse en contacto conmigo por correo electrónico. Estoy deseando escuchar tus ideas y colaborar en tu próximo proyecto."
   },
   "cv": "descargar cv",
-  "flip-cards": {
-    "design": {
+  "flip-cards": [
+    {
       "title": "Diseño",
       "number": "1.",
-      "text": "Design is the fusion of aesthetics and function to create visually striking and effective experiences."
+      "name": "letter",
+      "text": "El diseño es la fusión de estética y función para crear experiencias visualmente impactantes y efectivas."
     },
-    "frontend": {
+    {
       "title": "Frontend",
       "number": "2.",
+      "name": "carbon",
       "text": "Creación de interfaces visuales atractivas y funcionales. Especializado en traducir diseños creativos en experiencias de usuario intuitivas."
     },
-    "backend": {
+    {
       "title": "Backend",
       "number": "3.",
+      "name": "chip",
       "text": "Construccion de una lógica de servidor robusta, dedicada al procesamiento de datos y a la comunicación entre el frontend y la base de datos."
     },
-    "deployd": {
+    {
       "title": "Despliegue",
       "number": "4.",
+      "name": "deploy",
       "text": "Despliegue eficiente de soluciones, garantizando una implantación rápida y eficaz de servicios y aplicaciones."
     },
-    "data-base": {
+    {
       "title": "Data Base",
       "number": "5.",
+      "name": "database",
       "text": "Creación y gestión de bases de datos para un almacenamiento y recuperación eficaces, garantizando un flujo de información coherente y fiable."
     },
-    "maintenance": {
+    {
       "title": "Mantenimiento",
       "number": "6.",
+      "name":"wrench",
       "text": "Actualizaciones, correcciones y optimizaciones para garantizar una experiencia fluida y un rendimiento óptimo en entornos web."
     }
-  },
+  ],
   "projects-cards": {
     "card1": {
       "title": "Plataforma Web3",
@@ -92,6 +99,7 @@
     }
   },
   "mail": "Envíame un mail",
+  "copy": "copia",
   "education-cards": {
     "Academic": {
       "card1": {
