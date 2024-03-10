@@ -544,6 +544,34 @@ const Icon = ({ iconName, color, hoverColor, size, isHovered }) => {
         />
       </svg>
     ),
+    langEs: (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 80 80"
+        fill={fillColor}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M43.3333 56.6668V46.6668H49.9999V50.0002H59.9999V43.3335H43.3333V23.3335H66.6666V33.3335H59.9999V30.0002H49.9999V36.6668H66.6666V56.6668H43.3333ZM13.3333 23.3335H36.6666V30.0002H19.9999V36.6668H33.3333V43.3335H19.9999V50.0002H36.6666V56.6668H13.3333V23.3335Z"
+          stroke={fillColor}
+        />
+      </svg>
+    ),
+    langEn: (
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 80 80"
+        fill={fillColor}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.3333 56.6668V23.3335H19.9999V50.0002H29.9999V23.3335H36.6666V56.6668H13.3333ZM43.3333 56.6668V46.6668H49.9999V50.0002H59.9999V43.3335H43.3333V23.3335H66.6666V33.3335H59.9999V30.0002H49.9999V36.6668H66.6666V56.6668H43.3333Z"
+          stroke={fillColor}
+        />
+      </svg>
+    ),
   };
 
   // Obtener el SVG según la clave proporcionada (iconName)

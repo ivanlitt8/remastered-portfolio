@@ -7,7 +7,6 @@ const CardContainer = () => {
 
   const cardsData = t("flip-cards", { returnObjects: true });
   const cardsArray = Object.values(cardsData);
-  console.log(cardsArray);
 
   return (
     <div className="flex flex-wrap sm:mx-20 mx-2 justify-center mt-5">

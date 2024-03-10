@@ -3,13 +3,15 @@ import Link from "next/link";
 import Toggle from "./Toggle";
 import Icon from "./Icon";
 import BurguerButton from "./BurguerButton";
+import LanguageSwitcher from "./LanguageSwitcher";
 import styled from "styled-components";
 import { useTheme } from "@/context/ThemeContext";
+import { useTranslation } from "next-i18next";
 
 const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
   const { isDarkMode } = useTheme();
   const [clicked, setClicked] = useState(false);
-
+  const { t } = useTranslation();
   const handleClick = () => {
     setClicked(!clicked);
   };
@@ -44,7 +46,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
                 scrollToRef(aboutRef);
               }}
             >
-              <span>About</span>
+              <span>{t("navbar.about")}</span>
             </Link>
             <Link
               href="#"
@@ -54,7 +56,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
                 scrollToRef(contactRef);
               }}
             >
-              <span>Contact</span>
+              <span>{t("navbar.contact")}</span>
             </Link>
             <Link
               href="#"
@@ -64,7 +66,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
                 scrollToRef(projectsRef);
               }}
             >
-              <span>Projects</span>
+              <span>{t("navbar.projects")}</span>
             </Link>
             <Link
               href="#"
@@ -74,7 +76,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
                 scrollToRef(servicesRef);
               }}
             >
-              <span>Services</span>
+              <span>{t("navbar.services")}</span>
             </Link>
             {/* Iconos a la derecha */}
             <div className="flex items-center space-x-4">
@@ -96,6 +98,7 @@ const Navbar = ({ aboutRef, contactRef, projectsRef, servicesRef }) => {
                   />
                 </a>
               </div>
+              <LanguageSwitcher />
             </div>
           </div>
         </div>

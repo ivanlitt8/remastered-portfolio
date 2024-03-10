@@ -51,7 +51,7 @@ export default function Home() {
         <BrowserFrameworkFilled />
       </div>
       <br /> */}
-      <CustomParagraph text={t("paragraphs.first")} />
+      <CustomParagraph text={t("paragraphs.second")} />
       <div className="my-10 flex justify-center">
         <CvButton label={t("cv")} icon="download" uppercase={true} />
       </div>

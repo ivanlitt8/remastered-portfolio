@@ -5,10 +5,12 @@ import AnimatedText from "./AnimatedText";
 import AnimatedBorder from "./AnimatedBorder";
 import EducationTitle from "./EducationTitle";
 import useWindowWidth from "@/customHooks/useWindowWidth";
+import { useTranslation } from "next-i18next";
 
 const EducationGrid = () => {
   const { isDarkMode } = useTheme();
   const windowWidth = useWindowWidth();
+  const { t } = useTranslation();
 
   const [sectionVisibility, setSectionVisibility] = useState({
     academicStudies: false,
@@ -24,9 +26,8 @@ const EducationGrid = () => {
 
   return (
     <div className="flex flex-col">
-      {/* sm:bg-green-500 md:bg-yellow-500 lg:bg-orange-500 xl:bg-red-500 */}
       <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
-        <EducationTitle title="Academic Studies" />
+        <EducationTitle title={t("education-cards.titles.academic")} />
         <div
           className="cursor-pointer"
           onClick={() => handleToggleContent("academicStudies")}
@@ -39,16 +40,16 @@ const EducationGrid = () => {
         </div>
       </div>
       <AnimatedText
-        text={"ITC Analyst"}
-        place={"Universidad Nacional de La Plata"}
-        dates={"2021 - present"}
+        text={t("education-cards.academic.card1.title")}
+        place={t("education-cards.academic.card1.place")}
+        dates={t("education-cards.academic.card1.date")}
         isVisible={sectionVisibility["academicStudies"]}
       />
       <AnimatedBorder isVisible={sectionVisibility["academicStudies"]} />
       <AnimatedText
-        text={"Degree in computer science"}
-        place={"Universidad Nacional de La Plata"}
-        dates={"2023 - present"}
+        text={t("education-cards.academic.card2.title")}
+        place={t("education-cards.academic.card2.place")}
+        dates={t("education-cards.academic.card2.date")}
         isVisible={sectionVisibility["academicStudies"]}
       />
 
@@ -58,7 +59,7 @@ const EducationGrid = () => {
         }`}
       ></div>
       <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
-        <EducationTitle title="Courses" />
+        <EducationTitle title={t("education-cards.titles.courses")} />
         <div
           className="cursor-pointer"
           onClick={() => handleToggleContent("courses")}
@@ -71,30 +72,30 @@ const EducationGrid = () => {
         </div>
       </div>
       <AnimatedText
-        text={"UX/UI Course"}
-        place={"OpenBootcamp"}
-        dates={"March 2023 - September 2023"}
+        text={t("education-cards.courses.card1.title")}
+        place={t("education-cards.courses.card1.place")}
+        dates={t("education-cards.courses.card1.date")}
         isVisible={sectionVisibility["courses"]}
       />
       <AnimatedBorder isVisible={sectionVisibility["courses"]} />
       <AnimatedText
-        text={"Google Analytics Certification"}
-        place={"Skillshop"}
-        dates={"March 2023"}
+        text={t("education-cards.courses.card2.title")}
+        place={t("education-cards.courses.card2.place")}
+        dates={t("education-cards.courses.card2.date")}
         isVisible={sectionVisibility["courses"]}
       />
       <AnimatedBorder isVisible={sectionVisibility["courses"]} />
       <AnimatedText
-        text={"Full Stack Web Course"}
-        place={"#YoProgramo"}
-        dates={"November 2021 - June 2022"}
+        text={t("education-cards.courses.card3.title")}
+        place={t("education-cards.courses.card3.place")}
+        dates={t("education-cards.courses.card3.date")}
         isVisible={sectionVisibility["courses"]}
       />
       <AnimatedBorder isVisible={sectionVisibility["courses"]} />
       <AnimatedText
-        text={"Javascript Master"}
-        place={"Udemy"}
-        dates={"June 2020 - September 2020"}
+        text={t("education-cards.courses.card4.title")}
+        place={t("education-cards.courses.card4.place")}
+        dates={t("education-cards.courses.card4.date")}
         isVisible={sectionVisibility["courses"]}
       />
       <div
@@ -103,7 +104,7 @@ const EducationGrid = () => {
         }`}
       ></div>
       <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
-        <EducationTitle title="Languages" />
+        <EducationTitle title={t("education-cards.titles.languages")} />
         <div
           className="cursor-pointer"
           onClick={() => handleToggleContent("languages")}
@@ -116,12 +117,12 @@ const EducationGrid = () => {
         </div>
       </div>
       <AnimatedText
-        text={"Native: Spanish"}
+        text={t("education-cards.languages.lang1")}
         isVisible={sectionVisibility["languages"]}
       />
       <AnimatedBorder isVisible={sectionVisibility["languages"]} />
       <AnimatedText
-        text={"Others: English C1"}
+        text={t("education-cards.languages.lang2")}
         isVisible={sectionVisibility["languages"]}
       />
     </div>

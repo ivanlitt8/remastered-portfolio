@@ -10,7 +10,7 @@
     "services": "Servicios",
     "projects": "Proyectos Destacados",
     "skills": "Habilidades Técnicas",
-    "education": "Educacion",
+    "education": "Educación",
     "contact": "Contacto"
   },
   "paragraphs": {
@@ -39,7 +39,7 @@
       "title": "Backend",
       "number": "3.",
       "name": "chip",
-      "text": "Construccion de una lógica de servidor robusta, dedicada al procesamiento de datos y a la comunicación entre el frontend y la base de datos."
+      "text": "Construcción de una lógica de servidor robusta, dedicada al procesamiento de datos y a la comunicación entre el frontend y la base de datos."
     },
     {
       "title": "Despliegue",
@@ -60,49 +60,72 @@
       "text": "Actualizaciones, correcciones y optimizaciones para garantizar una experiencia fluida y un rendimiento óptimo en entornos web."
     }
   ],
-  "projects-cards": {
-    "card1": {
+  "projects-cards": [
+    { "type": "web",
       "title": "Plataforma Web3",
-      "text": "Plataforma descentralizada que utiliza la tecnología blockchain para permitir a los usuarios realizar campañas de crowdfunding sin necesidad de intermediarios financieros tradicionales."
+      "content": "Plataforma descentralizada que utiliza la tecnología blockchain para permitir a los usuarios realizar campañas de crowdfunding sin necesidad de intermediarios financieros tradicionales.",
+      "imageSrc": "/images/DeFi.png",
+      "link": "https://vault-crowd.netlify.app/"
     },
-    "card2": {
+    { "type": "ux/ui",
       "title": "Local Eyez",
-      "text": "Rediseño de la interfaz de usuario de LocalEyez, una plataforma dedicada a sugerir eventos y experiencias locales personalizados según los intereses del usuario."
+      "content": "Rediseño de la interfaz de usuario de LocalEyez, una plataforma dedicada a sugerir eventos y experiencias locales personalizados según los intereses del usuario.",
+      "imageSrc": "/images/localEyez.png",
+      "link": "https://drive.google.com/file/d/1F6s10Wael4Y73wZ-nkhDTtJhBlQvswGT/view"
     },
-    "card3": {
+    { "type": "ux/ui",
       "title": "Quick Bus",
-      "text": "Desarrollo de una aplicación de viajes en autobús que facilite la planificación de viajes, centrada en crear una experiencia de usuario intuitiva y amigable."
+      "content": "Desarrollo de una aplicación de viajes en autobús que facilite la planificación de viajes, centrada en crear una experiencia de usuario intuitiva y amigable.",
+      "imageSrc": "/images/quickBus.png",
+      "link": "https://drive.google.com/file/d/1yHFXrmpeb8ZVYy84uJUCF-ph3gDsUFdw/view"
     },
-    "card4": {
+    { "type": "web",
       "title": "PillCare",
-      "text": "Esta aplicación de recordatorio de medicación se desarrolló en equipo utilizando Scrum como metodología. Desempeñé mi papel como frontend, colaborando estrechamente con el equipo para presentar un producto que cumpliera los requisitos establecidos."
+      "content": "Esta aplicación de recordatorio de medicación se desarrolló en equipo utilizando Scrum como metodología. Desempeñé mi papel como frontend, colaborando estrechamente con el equipo para presentar un producto que cumpliera los requisitos establecidos.",
+      "imageSrc": "/images/pillCare.png",
+      "link": "https://c12-08-m-php-react-a5v3tztu2-c12-08-mphp-react.vercel.app/?vercelToolbarCode=Gmnd25EpXaFgo6o"
     },
-    "card5": {
+    { "type": "ux/ui",
       "title": "My Daily Nosh",
-      "text": "Experiencia de usuario para My Daily Nosh, una aplicación de planificación de comidas con funciones como listas de la compra colaborativas, escaneo inteligente de ingredientes y recomendaciones de recetas personalizadas. Simplifica la preparación de la comida y facilita la conexión con otros amantes de la gastronomía."
+      "content": "Experiencia de usuario para My Daily Nosh, una aplicación de planificación de comidas con funciones como listas de la compra colaborativas, escaneo inteligente de ingredientes y recomendaciones de recetas personalizadas. Simplifica la preparación de la comida y facilita la conexión con otros amantes de la gastronomía.",
+      "imageSrc": "/images/dailyNosh.png",
+      "link": "https://drive.google.com/file/d/11AWKJZ21nA8kAuYbSrdxpAoPEuo156aY/view"
     },
-    "card6": {
+    { "type": "web",
       "title": "Portfolio CRUD",
-      "text": "El sitio tiene inicio de sesión, autenticación, usuario, y tiene una base de datos que a través de una API le permite realizar funciones CRUD para todas las secciones."
+      "content": "El sitio tiene inicio de sesión, autenticación, usuario, y tiene una base de datos que a través de una API le permite realizar funciones CRUD para todas las secciones.",
+      "imageSrc": "/images/portfolio.png",
+      "link": "https://ivan-litt-portfolio.netlify.app/"
     },
-    "card7": {
+    { "type": "web",
       "title": "Dash Board",
-      "text": "Una herramienta visual que permite a los usuarios supervisar y analizar datos en tiempo real relacionados con las criptomonedas, utilizando una API."
+      "content": "Una herramienta visual que permite a los usuarios supervisar y analizar datos en tiempo real relacionados con las criptomonedas, utilizando una API.",
+      "imageSrc": "/images/dashBoard.png",
+      "link": "https://cryptoboard-ivan.netlify.app/"
     },
-    "card8": {
+    { "type": "ux/ui",
       "title": "Third-Eye",
-      "text": "Se trata de una presentación a clientes de ThirdEye, una atractiva y moderna plataforma web para promocionar servicios de visitas a propiedades en 360° para el sector inmobiliario. En este contexto, se establecen las bases que servirán de fundamento para la evolución continua del producto."
+      "content": "Se trata de una presentación a clientes de ThirdEye, una atractiva y moderna plataforma web para promocionar servicios de visitas a propiedades en 360° para el sector inmobiliario. En este contexto, se establecen las bases que servirán de fundamento para la evolución continua del producto.",
+      "imageSrc": "/images/thirdEye.png",
+      "link": "https://drive.google.com/file/d/13Q9hgCE1JHjojmDKp2VK_Vdhv604uYql/view"
     },
-    "card9": {
+    { "type": "web",
       "title": "Landing Page",
-      "text": "Se trata de una página llamativa y moderna, dirigida al sector de la tecnología financiera. El objetivo de esta página es atraer la atención del usuario y motivarlo a actuar con llamadas a la acción. Desarrollado con React y Tailwind."
+      "content": "Se trata de una página llamativa y moderna, dirigida al sector de la tecnología financiera. El objetivo de esta página es atraer la atención del usuario y motivarlo a actuar con llamadas a la acción. Desarrollado con React y Tailwind.",
+      "imageSrc": "/images/landingPage.png",
+      "link": "https://landingpage-ivan.netlify.app/"
     }
-  },
+  ],
   "mail": "Envíame un mail",
   "copy": "copia",
   "education-cards": {
-    "Academic": {
-      "card1": {
+    "titles": {
+      "academic":"Estudios Académicos",
+      "courses":"Cursos",
+      "languages":"Lenguajes"
+    },
+    "academic":{
+      "card1":{
         "title": "Analista TIC",
         "place": "Universidad Nacional de La Plata",
         "date": "2021 - presente"
@@ -113,7 +136,7 @@
         "date": "2023 - presente"
       }
     },
-    "Courses": {
+    "courses": {
       "card1": {
         "title": "Curso UX/UI",
         "place": "OpenBootcamp",
@@ -135,7 +158,7 @@
         "date": "Junio 2020 - Septiembre 2020"
       }
     },
-    "Languages": {
+    "languages": {
       "lang1": "Nativo: Español",
       "lang2": "Otros: Inglés C1"
     }
