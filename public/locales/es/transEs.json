@@ -11,7 +11,8 @@
     "projects": "Proyectos Destacados",
     "skills": "Habilidades Técnicas",
     "education": "Educación",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "experience": "Experiencia"
   },
   "paragraphs": {
     "first":
@@ -32,14 +33,14 @@
     {
       "title": "Frontend",
       "number": "2.",
-      "name": "carbon",
-      "text": "Creación de interfaces visuales atractivas y funcionales. Especializado en traducir diseños creativos en experiencias de usuario intuitivas."
+      "name": "chip",
+      "text": "Creación de interfaces visuales atractivas y funcionales. Especializado en traducir diseños creativos en experiencias de usuario agradables."
     },
     {
-      "title": "Backend",
+      "title": "UX/UI",
       "number": "3.",
-      "name": "chip",
-      "text": "Construcción de una lógica de servidor robusta, dedicada al procesamiento de datos y a la comunicación entre el frontend y la base de datos."
+      "name": "carbon",
+      "text": "Enfocado en la investigación y diseño de interfaces centradas en el usuario, asegurando que cada interacción sea intuitiva y accesible."
     },
     {
       "title": "Despliegue",
@@ -67,54 +68,69 @@
       "imageSrc": "/images/DeFi.png",
       "link": "https://vault-crowd.netlify.app/"
     },
-    { "type": "ux/ui",
+    { 
+      "type": "ux/ui",
       "title": "Local Eyez",
       "content": "Rediseño de la interfaz de usuario de LocalEyez, una plataforma dedicada a sugerir eventos y experiencias locales personalizados según los intereses del usuario.",
       "imageSrc": "/images/localEyez.png",
       "link": "https://drive.google.com/file/d/1F6s10Wael4Y73wZ-nkhDTtJhBlQvswGT/view"
     },
-    { "type": "ux/ui",
+    { 
+      "type": "ux/ui",
       "title": "Quick Bus",
       "content": "Desarrollo de una aplicación de viajes en autobús que facilite la planificación de viajes, centrada en crear una experiencia de usuario intuitiva y amigable.",
       "imageSrc": "/images/quickBus.png",
       "link": "https://drive.google.com/file/d/1yHFXrmpeb8ZVYy84uJUCF-ph3gDsUFdw/view"
     },
-    { "type": "web",
+    { 
+      "type": "web",
       "title": "PillCare",
       "content": "Esta aplicación de recordatorio de medicación se desarrolló en equipo utilizando Scrum como metodología. Desempeñé mi papel como frontend, colaborando estrechamente con el equipo para presentar un producto que cumpliera los requisitos establecidos.",
       "imageSrc": "/images/pillCare.png",
       "link": "https://c12-08-m-php-react-a5v3tztu2-c12-08-mphp-react.vercel.app/?vercelToolbarCode=Gmnd25EpXaFgo6o"
     },
-    { "type": "ux/ui",
+    { 
+      "type": "ux/ui",
       "title": "My Daily Nosh",
       "content": "Experiencia de usuario para My Daily Nosh, una aplicación de planificación de comidas con funciones como listas de la compra colaborativas, escaneo inteligente de ingredientes y recomendaciones de recetas personalizadas. Simplifica la preparación de la comida y facilita la conexión con otros amantes de la gastronomía.",
       "imageSrc": "/images/dailyNosh.png",
       "link": "https://drive.google.com/file/d/11AWKJZ21nA8kAuYbSrdxpAoPEuo156aY/view"
     },
-    { "type": "web",
+    { 
+      "type": "web",
       "title": "Portfolio CRUD",
       "content": "El sitio tiene inicio de sesión, autenticación, usuario, y tiene una base de datos que a través de una API le permite realizar funciones CRUD para todas las secciones.",
       "imageSrc": "/images/portfolio.png",
       "link": "https://ivan-litt-portfolio.netlify.app/"
     },
-    { "type": "web",
+    { 
+      "type": "web",
       "title": "Dash Board",
       "content": "Una herramienta visual que permite a los usuarios supervisar y analizar datos en tiempo real relacionados con las criptomonedas, utilizando una API.",
       "imageSrc": "/images/dashBoard.png",
       "link": "https://cryptoboard-ivan.netlify.app/"
     },
-    { "type": "ux/ui",
+    { 
+      "type": "ux/ui",
       "title": "Third-Eye",
       "content": "Se trata de una presentación a clientes de ThirdEye, una atractiva y moderna plataforma web para promocionar servicios de visitas a propiedades en 360° para el sector inmobiliario. En este contexto, se establecen las bases que servirán de fundamento para la evolución continua del producto.",
       "imageSrc": "/images/thirdEye.png",
       "link": "https://drive.google.com/file/d/13Q9hgCE1JHjojmDKp2VK_Vdhv604uYql/view"
     },
-    { "type": "web",
+    { 
+      "type": "web",
       "title": "Landing Page",
       "content": "Se trata de una página llamativa y moderna, dirigida al sector de la tecnología financiera. El objetivo de esta página es atraer la atención del usuario y motivarlo a actuar con llamadas a la acción. Desarrollado con React y Tailwind.",
       "imageSrc": "/images/landingPage.png",
       "link": "https://landingpage-ivan.netlify.app/"
-    }
+    },
+    { 
+      "type": "web",
+      "title": "API BCRA",
+      "content": "Esta es una web simple de consulta de datos financieros hecha con un un script de python, utilizando la API del Banco Central de La Nación Argentina. Desarrollado con Python y Streamlit.",
+      "imageSrc": "/images/bcra-api.png",
+      "link": "https://brca-api.streamlit.app/"
+  }
   ],
   "mail": "Envíame un mail",
   "copy": "copia",
@@ -162,5 +178,10 @@
       "lang1": "Nativo: Español",
       "lang2": "Otros: Inglés C1"
     }
+  },
+  "experience" : {
+    "title": "Boty Cloud",
+    "role": "Frontend Dev",
+    "description": "En Boty Cloud, una startup SaaS integradora de MercadoLibre y otros canales de venta online, me desempeño como Frontend Developer. Contribuyo a mejorar la experiencia de usuario y participo activamente en el rediseño de la aplicación, colaborando con los equipos de marketing y producto. Realizo entrevistas a usuarios para comprender mejor sus necesidades y trabajo junto al equipo de backend en la implementación de nuevas funcionalidades y mejoras de rendimiento. Utilizo herramientas como Next.js, Tailwind, Figma, Redux, y Google Cloud."
   }
 }

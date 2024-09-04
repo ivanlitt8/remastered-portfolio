@@ -11,7 +11,8 @@
     "projects": "Selected Projects",
     "skills": "Technical Skills",
     "education": "Education",
-    "contact": "Contact"
+    "contact": "Contact",
+    "experience": "Experience"
   },
   "paragraphs": {
     "first":
@@ -32,14 +33,14 @@
     {
       "title": "Frontend",
       "number": "2.",
-      "name": "carbon",
+      "name": "chip",
       "text": "Creation of attractive and functional visual interfaces. Specialized in translating creative designs into intuitive user experiences."
     },
     {
-      "title": "Backend",
+      "title": "UX/UI",
       "number": "3.",
-      "name": "chip",
-      "text": "Construction of a robust server logic, dedicated to data processing and communication between the frontend and the database."
+      "name": "carbon",
+      "text": "Focused on user-centric interface research and design, ensuring that every interaction is intuitive and accessible."
     },
     {
       "title": "Deployd",
@@ -123,6 +124,13 @@
       "content": "This is a striking and modern page, aimed at the fintech industry. The goal of this page is to attract the user's attention and motivate them to act with calls to action. Developed with React and Tailwind.",
       "imageSrc": "/images/landingPage.png",
       "link": "https://landingpage-ivan.netlify.app/"
+    },
+    {
+      "type": "web",
+      "title": "BCRA API",
+      "content": "This is a simple financial data query website made with a python script, using the API of the Banco Central de La Nación Argentina. Developed with Python and Streamlit.",
+      "imageSrc": "/images/bcra-api.png",
+      "link": "https://brca-api.streamlit.app/"
     }
   ],
   "mail": "Drop me an email",
@@ -171,5 +179,10 @@
       "lang1": "Native: Spanish",
       "lang2": "Others: English C1"
     }
+  },
+  "experience" : {
+    "title": "Boty Cloud",
+    "role": "Frontend Dev",
+    "description": "At Boty Cloud, a SaaS startup that integrates MercadoLibre and other online sales channels, I work as Frontend Developer. I contribute to improve the user experience and actively participate in the redesign of the application, collaborating with the marketing and product teams. I conduct user interviews to better understand their needs and work with the backend team in the implementation of new features and performance improvements. I use tools such as Next.js, Tailwind, Figma, Redux, and Google Cloud."
   }
 }

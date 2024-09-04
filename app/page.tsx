@@ -12,8 +12,7 @@ import EducationGrid from "@/components/EducationGrid";
 import CopyButton from "@/components/CopyButton";
 import CustomTitle from "@/components/CustomTitle";
 import CustomParagraph from "@/components/CustomParagraph";
-// import BrowserFrameworkFilled from "@/components/BrowserFrameworkFilled";
-// import BrowserFramework from "@/components/BrowserFramework";
+import ExperienceContainer from "@/components/ExperienceContainer";
 import { useTranslation } from "next-i18next";
 
 export default function Home() {
@@ -45,12 +44,6 @@ export default function Home() {
       <br />
       <CustomParagraph text={t("paragraphs.first")} />
       <br />
-      {/* <div className="mx-2 sm:mx-20 space-x-5 flex items-center justify-center">
-        <BrowserFrameworkFilled />
-        <BrowserFramework />
-        <BrowserFrameworkFilled />
-      </div>
-      <br /> */}
       <CustomParagraph text={t("paragraphs.second")} />
       <div className="my-10 flex justify-center">
         <CvButton label={t("cv")} icon="download" uppercase={true} />
@@ -59,6 +52,10 @@ export default function Home() {
         <CustomTitle title={t("titles.services")} />
       </div>
       <CardContainer />
+      <div className="sm:pt-10 pt-16 ">
+        <CustomTitle title={t("titles.experience")} />
+      </div>
+      <ExperienceContainer />
       <div ref={projectsRef} className="sm:pt-10 pt-16 ">
         <CustomTitle title={t("titles.projects")} />
       </div>
