@@ -64,6 +64,13 @@
   "projects-cards": [
     {
       "type": "web",
+      "title": "R3ALIM",
+      "content": "Landing page developed for an Australian-based architectural rendering company. The site focuses on conveying an elegant visual identity, with an organized and attractive presentation of featured projects. It includes an interactive form with specific features to facilitate quote requests and efficiently manage contact information for potential clients.",
+      "imageSrc": "/images/r3alim.png",
+      "link": "https://r3alim.com/"
+    },
+    {
+      "type": "web",
       "title": "Web3 Platform",
       "content": "Decentralized platform that uses blockchain technology to allow users to run crowdfunding campaigns without the need for traditional financial intermediaries.",
       "imageSrc": "/images/DeFi.png",
@@ -180,9 +187,18 @@
       "lang2": "Others: English C1"
     }
   },
-  "experience" : {
-    "title": "Boty Cloud",
-    "role": "Frontend Dev",
-    "description": "At Boty Cloud, a SaaS startup that integrates MercadoLibre and other online sales channels, I work as Frontend Developer. I contribute to improve the user experience and actively participate in the redesign of the application, collaborating with the marketing and product teams. I conduct user interviews to better understand their needs and work with the backend team in the implementation of new features and performance improvements. I use tools such as Next.js, Tailwind, Figma, Redux, and Google Cloud."
-  }
+  "experiences": [
+    {
+      "title": "Boty Cloud",
+      "role": "Frontend Dev",
+      "period": "February 2023 - Present",
+      "description": "Boty Cloud is a SaaS startup that integrates MercadoLibre, TiendaNube, and other online sales channels. The primary focus of the role is the comprehensive modernization of the user experience and application. Tasks include:\n\n* Redesigning, optimizing, and creating key interfaces, components, and functionalities.\n\n* Collaborating with product and marketing teams to align solutions with business objectives.\n\n* Participating in user interviews to identify needs and opportunities for improvement.\n\n* Providing technical support and working closely with the backend team in the development of new features and performance improvements.\n\n* Managing infrastructure through Google Cloud Platform for integrations, deployments, and configurations.\n\nTechnologies and tools: Next.js, Tailwind CSS, TypeScript, Redux, Node.js, Figma, Git, Google Cloud Platform (GCP), Trello, Shadcn/ui, Next UI."
+    },
+    {
+      "title": "Freelancer",
+      "role": "FullStack Developer",
+      "period": "2021 - Present",
+      "description": "As a freelance developer, I've worked on a variety of projects for clients across different industries. I specialize in creating modern and engaging web interfaces optimized for mobile and desktop devices. I implement solutions using technologies such as React, Next.js, Tailwind CSS, and design tools like Figma. My focus is on creating intuitive and functional user experiences, working closely with clients to understand their needs and translate them into effective solutions."
+    }
+  ]
 }
