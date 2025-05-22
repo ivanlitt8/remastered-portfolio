@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import Icon from "./Icon";
+import { useTranslation } from "next-i18next";
 
 const CvButton = ({ label, icon, uppercase }) => {
   const { isDarkMode } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
+  const { i18n } = useTranslation();
 
-  const fileUrl =
-    "https://drive.google.com/file/d/1Wj2Nv4AK1ImXDaQqvwPqqxP7EiMj3UiL/view";
+  const cvUrls = {
+    es: "https://docs.google.com/document/d/1yMBvq25UMK4xZYSHuUbTPiRl4EVm-SS6/edit?usp=sharing&ouid=111406591095754587380&rtpof=true&sd=true",
+    en: "https://docs.google.com/document/d/1mUVYqsDctxfd2h8SGlaVQsEfqaByX6tW/edit?usp=sharing&ouid=111406591095754587380&rtpof=true&sd=true" // Reemplaza con el ID de tu CV en inglés
+  };
+
   const downloadCv = () => {
+    const currentLanguage = i18n.language;
+    const fileUrl = cvUrls[currentLanguage] || cvUrls.es; // Usa el CV en español como fallback
     window.open(fileUrl, "_blank");
   };
 
