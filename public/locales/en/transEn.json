@@ -64,6 +64,13 @@
   "projects-cards": [
     {
       "type": "web",
+      "title": "Helping Crew",
+      "content": "Website developed for an Australian cleaning services company. The site conveys a trustworthy and professional brand identity, with a clear presentation of services and locations. It allows service bookings with automatic price calculation, stored in Firebase, and sends confirmation emails to both the client and the company administrator. It also includes customized contact and quote request forms, optimized for client acquisition and direct communication.",
+      "imageSrc": "/images/helpingCrew.png",
+      "link": "https://helpingcrew.art/"
+    },
+    {
+      "type": "web",
       "title": "R3ALIM",
       "content": "Landing page developed for an Australian-based architectural rendering company. The site focuses on conveying an elegant visual identity, with an organized and attractive presentation of featured projects. It includes an interactive form with specific features to facilitate quote requests and efficiently manage contact information for potential clients.",
       "imageSrc": "/images/r3alim.png",
