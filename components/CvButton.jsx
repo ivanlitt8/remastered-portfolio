@@ -9,8 +9,8 @@ const CvButton = ({ label, icon, uppercase }) => {
   const { i18n } = useTranslation();
 
   const cvUrls = {
-    es: "https://docs.google.com/document/d/1yMBvq25UMK4xZYSHuUbTPiRl4EVm-SS6/edit?usp=sharing&ouid=111406591095754587380&rtpof=true&sd=true",
-    en: "https://docs.google.com/document/d/1mUVYqsDctxfd2h8SGlaVQsEfqaByX6tW/edit?usp=sharing&ouid=111406591095754587380&rtpof=true&sd=true" // Reemplaza con el ID de tu CV en inglés
+    es: "https://docs.google.com/document/d/13qTzahyjQXhoblXCOZ8LZLgfvIEL1dbQl4hg6Cpb-lc/edit?usp=sharing",
+    en: "https://docs.google.com/document/d/1zUl9B5np0IDgsJRJtn2UIrAePvWi5vcaD66cHwWfzs0/edit?usp=sharing" // Reemplaza con el ID de tu CV en inglés
   };
 
   const downloadCv = () => {

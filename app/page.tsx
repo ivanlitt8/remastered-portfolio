@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import NavBar from "@/components/Navbar";
 import CardContainer from "@/components/CardContainer";
 import CvButton from "@/components/CvButton";
@@ -26,6 +26,10 @@ export default function Home() {
   const handleClick = () => {
     console.log("Botón clickeado desde App");
   };
+
+  useEffect(() => {
+    document.title = "Ivan Litt Portfolio";
+  }, []);
 
   const { t } = useTranslation();
 

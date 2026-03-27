@@ -6,7 +6,7 @@
     "services": "Servicios"
   },
   "titles": {
-    "landing": "Programador Frontend UxUi",
+    "landing": "Ingeniero Frontend · React · Next.js",
     "services": "Servicios",
     "projects": "Proyectos Destacados",
     "skills": "Habilidades Técnicas",
@@ -62,6 +62,13 @@
     }
   ],
   "projects-cards": [
+    {
+      "type": "web",
+      "title": "Plataforma de logística educativa",
+      "content": "Desarrollo frontend para el Ministerio de Educación (sector público): plataforma de logística y gestión de inventario creada desde cero, que reemplaza un sistema heredado y centraliza las operaciones en toda la provincia. Incluye control de acceso basado en roles (JWT), paneles de control, informes y exportación a Excel para la operación diaria; gestiona aproximadamente el 70% de los recursos escolares provinciales. Stack: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway.",
+      "imageSrc": "/images/dashBoard.png",
+      "link": "https://github.com/ivanlitt8"
+    },
     {
       "type": "web",
       "title": "Helping Crew",
@@ -190,21 +197,27 @@
     },
     "languages": {
       "lang1": "Nativo: Español",
-      "lang2": "Otros: Inglés C1"
+      "lang2": "Otros: Inglés B2"
     }
   },
-  "experiences" : [
+  "experiences": [
     {
       "title": "Boty Cloud",
-      "role": "Frontend Dev",
-      "period": "Febrero 2023 - Presente",
-      "description": "Boty Cloud es una startup SaaS que integra MercadoLibre, TiendaNube y otros canales de venta online. El enfoque principal del rol es la modernización integral de la experiencia de usuario y la aplicación. Las tareas incluyen:\n\n* Rediseño, optimización y creación de interfaces, componentes y funcionalidades clave.\n\n* Colaboración con los equipos de producto y marketing para alinear las soluciones con los objetivos del negocio.\n\n* Participación en entrevistas con usuarios para detectar necesidades y oportunidades de mejora.\n\n* Soporte técnico y trabajo conjunto con el equipo backend en el desarrollo de nuevas funcionalidades y mejoras de rendimiento.\n\n* Gestión de infraestructura mediante Google Cloud Platform para integraciones, despliegues y configuraciones.\n\nTecnologías y herramientas: Next.js, Tailwind CSS, TypeScript, Redux, Node.js, Figma, Git, Google Cloud Platform (GCP), Trello, Shadcn/ui, Next UI."
+      "role": "Frontend Engineer",
+      "period": "Mayo 2024 - Presente",
+      "description": "Plataforma SaaS para vendedores de alto volumen en Mercado Libre: facturación, ajuste de precios y operaciones multicuenta con IA. Remoto.\n\n* Lideré el rediseño de la interfaz de usuario principal de la aplicación, mejorando la accesibilidad, la usabilidad y la experiencia general del usuario.\n\n* Reduje las consultas al backend en un 66% mediante optimizaciones del frontend, mejoras en la gestión del estado y estrategias más inteligentes de obtención de datos.\n\n* Diseñé e implementé flujos de incorporación y tutoriales guiados, reduciendo las solicitudes de soporte y mejorando la activación de usuarios.\n\n* Lideré la migración a la interfaz de usuario de Shadcn, mejorando la velocidad de desarrollo y la coherencia del diseño en toda la plataforma.\n\n* Integré Sentry para el seguimiento y la monitorización avanzados de errores en flujos de usuario críticos.\n\n* Implementé pruebas de regresión automatizadas con Jest que cubren la lógica de filtrado para prevenir regresiones en los cambios de la interfaz de usuario y reducir el esfuerzo de control de calidad manual.\n\n* Colaboré estrechamente con los equipos de backend y soporte en definiciones técnicas, resolución de errores y entrega de funcionalidades.\n\nTecnologías y herramientas: React, Next.js, TypeScript, Shadcn UI, Tailwind, TanStack Query, Sentry, GCP, Firebase, Framer Motion."
     },
     {
-    "title": "Freelancer",
-    "role": "FullStack Developer",
-    "period": "2021 - Presente",
-    "description": "Como desarrollador freelance, he trabajado en una variedad de proyectos para clientes de distintas industrias. Me especializo en la creación de interfaces web modernas y atractivas, optimizadas para dispositivos móviles y desktop. Implemento soluciones utilizando tecnologías como React, Next.js, Tailwind CSS y herramientas de diseño como Figma. Mi enfoque se centra en crear experiencias de usuario intuitivas y funcionales, colaborando estrechamente con los clientes para entender sus necesidades y traducirlas en soluciones efectivas."
+      "title": "Ministerio de Educación",
+      "role": "Frontend Engineer",
+      "period": "Diciembre 2025 - Febrero 2026",
+      "description": "Sector público: plataforma de logística y gestión de existencias (contrato), Argentina.\n\n* Se creó una plataforma de logística y gestión de inventario desde cero, reemplazando un sistema heredado y centralizando las operaciones en toda la provincia.\n\n* Implementación de control de acceso basado en roles (JWT), relaciones complejas entre entidades y flujos de trabajo de seguimiento de entregas.\n\n* Desarrollo de paneles de control, herramientas de generación de informes y exportaciones a Excel para respaldar las decisiones operativas diarias.\n\n* La plataforma gestiona aproximadamente el 70% de los recursos escolares provinciales, mejorando significativamente la eficiencia operativa.\n\nTecnologías y herramientas: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway."
+    },
+    {
+      "title": "Freelancer",
+      "role": "FullStack Developer",
+      "period": "2024 - 2025",
+      "description": "Proyectos seleccionados — trabajo remoto.\n\n* Ofrecí soluciones web integrales para clientes, incluyendo sistemas de reservas con precios automatizados y flujos de notificación, y páginas de destino de alto rendimiento con cálculos en tiempo real.\n\nTecnologías y herramientas: Next.js, Supabase, Vite, Firebase."
     }
   ]
 }
