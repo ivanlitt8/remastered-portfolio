@@ -64,6 +64,13 @@
   "projects-cards": [
     {
       "type": "web",
+      "title": "Terra Scan — Geospatial Intelligence Platform",
+      "content": "B2B SaaS platform for geospatial analytics and precision agricultural monitoring. The system centralizes plot and farm management through the integration and real-time processing of multispectral satellite analytics (NDVI from Planet and Sentinel) and the Google Earth Engine engine. It includes a critical module for early detection and historical tracking of fire hotspots based on NASA (FIRMS) data, optimized through specific geographic filters. It features secure authentication (Google OAuth), environment control, and efficient handling of large volumes of geographic data (PostGIS) under strict retention policies. Stack: Next.js, TypeScript, Tailwind CSS, NestJS, Supabase, PostgreSQL, PostGIS, Prisma, Google Cloud.",
+      "imageSrc": "/images/terrascan-platform.png",
+      "link": "https://terrascan-platform.vercel.app/"
+    },
+    {
+      "type": "web",
       "title": "Educational logistics platform",
       "content": "Frontend development for the Ministry of Education (public sector): a logistics and inventory management platform built from scratch, replacing a legacy system and centralizing operations across the province. It includes role-based access control (JWT), dashboards, reporting tools, and Excel exports for day-to-day operations; it manages approximately 70% of provincial school resources. Stack: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway.",
       "imageSrc": "/images/ministerio.png",
