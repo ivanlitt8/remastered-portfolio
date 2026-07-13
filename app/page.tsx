@@ -49,6 +49,8 @@ export default function Home() {
       <CustomParagraph text={t("paragraphs.first")} />
       <br />
       <CustomParagraph text={t("paragraphs.second")} />
+      <br />
+      <CustomParagraph text={t("paragraphs.third")} />
       <div className="my-10 flex justify-center">
         <CvButton label={t("cv")} icon="download" uppercase={true} />
       </div>
@@ -73,7 +75,7 @@ export default function Home() {
       <div ref={contactRef}>
         <CustomTitle title={t("titles.contact")} />
       </div>
-      <CustomParagraph text={t("paragraphs.third")} />
+      <CustomParagraph text={t("paragraphs.contact")} />
       <div className="my-10 mx-5 flex justify-center space-x-4">
         <MailButton label={t("mail")} icon="send" uppercase={false} />
         <CopyButton label={t("copy")} icon="copy" uppercase={false} />

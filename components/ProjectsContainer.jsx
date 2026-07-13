@@ -21,6 +21,7 @@ const ProjectsContainer = ({ activeFilter }) => {
           content={project.content}
           imageSrc={project.imageSrc}
           link={project.link}
+          date={project.date}
         />
       ))}
     </div>

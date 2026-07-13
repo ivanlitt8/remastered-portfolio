@@ -6,7 +6,7 @@
     "services": "Services"
   },
   "titles": {
-    "landing": "Frontend Engineer · React · Next.js",
+    "landing": "Full Stack Engineer · React · Next.js · Node.js · TypeScript",
     "services": "Services",
     "projects": "Selected Projects",
     "skills": "Technical Skills",
@@ -15,12 +15,10 @@
     "experience": "Experience"
   },
   "paragraphs": {
-    "first":
-      "Welcome to my digital world! I am Ivan, a hybrid web developer with experience in several key areas. I am currently studying ICT Analyst, which has given me a solid background in information technology.",
-    "second":
-      "Every project is an opportunity to merge my technical skills with my boundless creativity, as well as to rigorously apply logic and problem solving. In my portfolio, you can explore examples of projects that reflect this unique combination of skills. I invite you to explore my portfolio and download my CV to learn more about my experience and past projects - I hope you enjoy exploring my work!",
-    "third":
-      "Do you have a question or an idea in mind? I am here to help you! Feel free to contact me via email. I look forward to hearing your thoughts and collaborating on your next project."
+    "first": "I build modern web applications focused on performance, usability, and scalable architecture. My main expertise is React, Next.js, and TypeScript, backed by solid experience across the full stack with Node.js, NestJS, PostgreSQL, and cloud services.",
+    "second": "Over the past few years I've worked on SaaS products, public sector platforms, and geospatial applications, taking features from technical design through production. I enjoy turning complex requirements into intuitive user experiences while collaborating closely with product and engineering teams.",
+    "third": "This portfolio showcases some of the projects I've worked on, the technologies behind them, and the way I approach software development. Feel free to explore my work or download my CV if you'd like to know more.",
+    "contact": "Do you have a question or an idea in mind? I am here to help you! Feel free to contact me via email. I look forward to hearing your thoughts and collaborating on your next project."
   },
   "cv": "download cv",
   "flip-cards": [
@@ -57,14 +55,23 @@
     {
       "title": "Maintenance",
       "number": "6.",
-      "name":"wrench",
+      "name": "wrench",
       "text": "Updates, fixes and optimizations to ensure a smooth experience and optimal performance in web environments."
     }
   ],
   "projects-cards": [
     {
       "type": "web",
+      "title": "Orchestrator Agents",
+      "date": "Jul 2026",
+      "content": "Multi-agent orchestration system based on cyclic graphs with LangGraph. It breaks down complex business requests into subtasks run by specialist agents (web research, writing, review), pauses for human-in-the-loop (HITL) approval, and consolidates the result in vector memory. Includes a React chat UI with SSE streaming and LangGraph Studio for debugging. Stack: LangGraph, FastAPI, React, TypeScript, Tailwind, Groq (Llama 3.3), Tavily, ChromaDB, Gemini embeddings.",
+      "imageSrc": "/images/orquestador-remove.png",
+      "link": "https://github.com/ivanlitt8/orchestrator-agents"
+    },
+    {
+      "type": "web",
       "title": "Terra Scan — Geospatial Intelligence Platform",
+      "date": "May 2026 - Jun 2026",
       "content": "B2B SaaS platform for geospatial analytics and precision agricultural monitoring. The system centralizes plot and farm management through the integration and real-time processing of multispectral satellite analytics (NDVI from Planet and Sentinel) and the Google Earth Engine engine. It includes a critical module for early detection and historical tracking of fire hotspots based on NASA (FIRMS) data, optimized through specific geographic filters. It features secure authentication (Google OAuth), environment control, and efficient handling of large volumes of geographic data (PostGIS) under strict retention policies. Stack: Next.js, TypeScript, Tailwind CSS, NestJS, Supabase, PostgreSQL, PostGIS, Prisma, Google Cloud.",
       "imageSrc": "/images/terrascan-platform.png",
       "link": "https://terrascan-platform.vercel.app/"
@@ -72,6 +79,7 @@
     {
       "type": "web",
       "title": "Educational logistics platform",
+      "date": "Dec 2025 - Feb 2026",
       "content": "Frontend development for the Ministry of Education (public sector): a logistics and inventory management platform built from scratch, replacing a legacy system and centralizing operations across the province. It includes role-based access control (JWT), dashboards, reporting tools, and Excel exports for day-to-day operations; it manages approximately 70% of provincial school resources. Stack: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway.",
       "imageSrc": "/images/ministerio.png",
       "link": "https://github.com/ivanlitt8"
@@ -79,6 +87,7 @@
     {
       "type": "web",
       "title": "Helping Crew",
+      "date": "2024 - 2025",
       "content": "Website developed for an Australian cleaning services company. The site conveys a trustworthy and professional brand identity, with a clear presentation of services and locations. It allows service bookings with automatic price calculation, stored in Firebase, and sends confirmation emails to both the client and the company administrator. It also includes customized contact and quote request forms, optimized for client acquisition and direct communication.",
       "imageSrc": "/images/helpingCrew.png",
       "link": "https://helpingcrew.art/"
@@ -86,6 +95,7 @@
     {
       "type": "web",
       "title": "R3ALIM",
+      "date": "2024",
       "content": "Landing page developed for an Australian-based architectural rendering company. The site focuses on conveying an elegant visual identity, with an organized and attractive presentation of featured projects. It includes an interactive form with specific features to facilitate quote requests and efficiently manage contact information for potential clients.",
       "imageSrc": "/images/r3alim.png",
       "link": "https://r3alim.com/"
@@ -93,6 +103,7 @@
     {
       "type": "web",
       "title": "Web3 Platform",
+      "date": "2023",
       "content": "Decentralized platform that uses blockchain technology to allow users to run crowdfunding campaigns without the need for traditional financial intermediaries.",
       "imageSrc": "/images/DeFi.png",
       "link": "https://vault-crowd.netlify.app/"
@@ -100,6 +111,7 @@
     {
       "type": "ux/ui",
       "title": "Local Eyez",
+      "date": "2023",
       "content": "Redesign of the user interface of LocalEyez, a platform dedicated to suggesting local events and experiences personalized according to user interests.",
       "imageSrc": "/images/localEyez.png",
       "link": "https://drive.google.com/file/d/1F6s10Wael4Y73wZ-nkhDTtJhBlQvswGT/view"
@@ -107,6 +119,7 @@
     {
       "type": "ux/ui",
       "title": "Quick Bus",
+      "date": "2023",
       "content": "Development of a bus travel application that facilitates trip planning, focused on creating an intuitive and friendly user experience.",
       "imageSrc": "/images/quickBus.png",
       "link": "https://drive.google.com/file/d/1yHFXrmpeb8ZVYy84uJUCF-ph3gDsUFdw/view"
@@ -114,6 +127,7 @@
     {
       "type": "web",
       "title": "PillCare",
+      "date": "2022",
       "content": "This medication reminder app is Developed as a team using Scrum as a methodology. I carried out my role as a frontend, working closely collaboration with the team to present a product that met the stated requirements.",
       "imageSrc": "/images/pillCare.png",
       "link": "https://c12-08-m-php-react-a5v3tztu2-c12-08-mphp-react.vercel.app/?vercelToolbarCode=Gmnd25EpXaFgo6o"
@@ -121,6 +135,7 @@
     {
       "type": "ux/ui",
       "title": "My Daily Nosh",
+      "date": "2023",
       "content": "User experience for My Daily Nosh, a meal planning app with features including collaborative shopping lists, smart ingredient scanning, and personalized recipe recommendations. Simplifies food preparation and makes it easy to connect with other food lovers.",
       "imageSrc": "/images/dailyNosh.png",
       "link": "https://drive.google.com/file/d/11AWKJZ21nA8kAuYbSrdxpAoPEuo156aY/view"
@@ -128,6 +143,7 @@
     {
       "type": "web",
       "title": "Portfolio CRUD",
+      "date": "2022",
       "content": "The site has login, authentication, user, and has a database that through an API allows you to perform CRUD functions for all sections.",
       "imageSrc": "/images/portfolio.png",
       "link": "https://ivan-litt-portfolio.netlify.app/"
@@ -135,6 +151,7 @@
     {
       "type": "web",
       "title": "Dash Board",
+      "date": "2022",
       "content": "A visual tool that enables users to monitor and analyze real-time data related to cryptocurrencies, using an API.",
       "imageSrc": "/images/dashBoard.png",
       "link": "https://cryptoboard-ivan.netlify.app/"
@@ -142,6 +159,7 @@
     {
       "type": "ux/ui",
       "title": "Third-Eye",
+      "date": "2023",
       "content": "This is a presentation to clients of ThirdEye, an attractive and modern web platform to promote 360° property tour services for the real estate sector. In this context, the foundations are established that will serve as a foundation for the continuous evolution of the product.",
       "imageSrc": "/images/thirdEye.png",
       "link": "https://drive.google.com/file/d/13Q9hgCE1JHjojmDKp2VK_Vdhv604uYql/view"
@@ -149,6 +167,7 @@
     {
       "type": "web",
       "title": "Landing Page",
+      "date": "2022",
       "content": "This is a striking and modern page, aimed at the fintech industry. The goal of this page is to attract the user's attention and motivate them to act with calls to action. Developed with React and Tailwind.",
       "imageSrc": "/images/landingPage.png",
       "link": "https://landingpage-ivan.netlify.app/"
@@ -156,6 +175,7 @@
     {
       "type": "web",
       "title": "BCRA API",
+      "date": "2023",
       "content": "This is a simple financial data query website made with a python script, using the API of the Banco Central de La Nación Argentina. Developed with Python and Streamlit.",
       "imageSrc": "/images/bcra-api.png",
       "link": "https://brca-api.streamlit.app/"
@@ -165,15 +185,15 @@
   "copy": "copy",
   "education-cards": {
     "titles": {
-      "academic":"Academic Studies",
-      "courses":"Courses",
-      "languages":"Languages"
+      "academic": "Academic Studies",
+      "courses": "Courses",
+      "languages": "Languages"
     },
     "academic": {
       "card1": {
         "title": "ITC Analyst",
         "place": "Universidad Nacional de La Plata",
-        "date": "2021 - present"
+        "date": "2021 - 2024"
       },
       "card2": {
         "title": "Degree in computer science",
@@ -205,7 +225,7 @@
     },
     "languages": {
       "lang1": "Native: Spanish",
-      "lang2": "Others: English B2"
+      "lang2": "Others: English C1"
     }
   },
   "experiences": [
@@ -213,19 +233,19 @@
       "title": "Boty Cloud",
       "role": "Frontend Engineer",
       "period": "May 2024 - Present",
-      "description": "SaaS platform for high-volume Mercado Libre sellers: invoicing, price adjustments, and multi-account operations with AI. Remote.\n\n* Led the redesign of the main application UI, improving accessibility, usability, and the overall user experience.\n\n* Reduced backend queries by 66% through frontend optimizations, better state management, and smarter data-fetching strategies.\n\n* Designed and implemented onboarding flows and guided tutorials, reducing support tickets and improving user activation.\n\n* Led the migration to the Shadcn UI stack, improving development speed and design consistency across the platform.\n\n* Integrated Sentry for advanced error tracking and monitoring in critical user flows.\n\n* Implemented automated regression tests with Jest covering filtering logic to prevent UI regressions and reduce manual QA effort.\n\n* Worked closely with backend and support teams on technical specs, bug fixing, and feature delivery.\n\nTechnologies and tools: React, Next.js, TypeScript, Shadcn UI, Tailwind, TanStack Query, Sentry, GCP, Firebase, Framer Motion."
+      "description": "SaaS platform for high-volume Mercado Libre sellers — invoicing, price adjustments, and multi-account operations with AI. Remote.\n\n* Designed and developed a BFF layer with over 20 endpoints in Next.js to integrate Cloud Run, BigQuery, Gemini, and Firebase services.\n\n* Led the redesign of the main interface, improving accessibility and usability while reducing backend queries by 66% through state optimizations and data-fetching strategies.\n\n* Diagnosed end-to-end incidents with full access to the NestJS backend and GCP, speeding up resolution by providing precise technical context to the backend team.\n\n* Participated in the design of the multi-warehouse inventory system, translating business requirements into technical decisions to support multiple warehouses and platforms.\n\n* Designed onboarding flows, guided tours, and in-app notifications, simplifying highly configurable features for non-technical users and reducing repetitive support tickets.\n\n* Strengthened code quality by integrating Sentry and Jest regression tests; collaborated on deployment incident resolution by adjusting Dockerfiles for Google Cloud builds and migrated the UI kit to Shadcn UI.\n\nTechnologies and tools: React, Next.js, TypeScript, REST APIs, Shadcn UI, Tailwind, TanStack Query, Sentry, GCP, Firebase, Cloud Run."
     },
     {
       "title": "Ministry of Education",
-      "role": "Frontend Engineer",
+      "role": "Full Stack Engineer",
       "period": "December 2025 - February 2026",
-      "description": "Public sector: logistics and inventory management platform (contract), Argentina.\n\n* Built a logistics and inventory platform from scratch, replacing a legacy system and centralizing operations across the province.\n\n* Implemented role-based access control (JWT), complex entity relationships, and delivery-tracking workflows.\n\n* Developed dashboards, reporting tools, and Excel exports to support daily operational decisions.\n\n* The platform manages approximately 70% of provincial school resources, significantly improving operational efficiency.\n\nTechnologies and tools: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway."
+      "description": "Public sector — logistics and inventory management platform. Fixed-term contract, completed on time. Argentina.\n\n* The system currently manages an estimated 70% of school resources across the province of Chubut (Patagonian region of Argentina), covering schools and logistics operations.\n\n* Developed a web platform from scratch to centralize and optimize school furniture and supply management — stock movements, delivery tracking, and distribution to educational institutions — replacing a legacy system.\n\n* Implemented role-based access control (JWT), entity management (schools, warehouses, carriers), and remittance tracking with state handling.\n\n* Built dashboards, reporting tools, Excel exports, and minimum-stock alerts to support day-to-day operations.\n\n* Integrated with existing systems, including Tango Gestión (SQL Server), managing data migration and adaptation processes.\n\nTechnologies and tools: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway."
     },
     {
-      "title": "Freelancer",
-      "role": "FullStack Developer",
-      "period": "2024 - 2025",
-      "description": "Selected projects — remote work.\n\n* Delivered end-to-end web solutions for clients, including booking systems with automated pricing and notification flows, and high-performance landing pages with real-time calculations.\n\nTechnologies and tools: Next.js, Supabase, Vite, Firebase."
+      "title": "Terra Scan",
+      "role": "Personal Project",
+      "period": "May 2026 - June 2026",
+      "description": "NestJS REST API and Next.js frontend for geospatial and satellite monitoring of rural plots in Argentina.\n\n* Designed and developed the core backend of a geospatial monitoring platform, implementing a NestJS REST API with modular architecture, JWT authentication via JWKS, and strict DTO validation.\n\n* Integrated Google Earth Engine, Sentinel Hub, and PostGIS to process satellite metrics (NDVI) and implement early fire detection with NASA (FIRMS) data.\n\n* Implemented caching strategies to control costs and latency of external satellite APIs, and designed the system to degrade gracefully if Earth Engine is unavailable at startup.\n\n* Managed secure PDF report storage and download via signed Supabase Storage URLs.\n\n* Covered the backend with unit and end-to-end tests (Jest + Supertest).\n\nTechnologies and tools: NestJS, Prisma, PostgreSQL, PostGIS, Next.js, TypeScript, Google Earth Engine, Sentinel Hub, Supabase."
     }
   ]
 }
