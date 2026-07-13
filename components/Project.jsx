@@ -51,7 +51,12 @@ const Project = ({ title, content, imageSrc, link, date }) => {
             </div>
           </div>
           <div className="relative md:w-2/5 w-2/3 md:ml-auto h-52">
-            <Image src={imageSrc} layout="fill" objectFit="contain" alt="alt" />
+            <Image
+              src={imageSrc}
+              fill
+              className="object-contain"
+              alt={title || "Project image"}
+            />
           </div>
         </div>
       </div>

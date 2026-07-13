@@ -6,7 +6,7 @@
     "services": "Servicios"
   },
   "titles": {
-    "landing": "Ingeniero Frontend · React · Next.js",
+    "landing": "Full Stack Engineer · React · Next.js · Node.js · TypeScript",
     "services": "Servicios",
     "projects": "Proyectos Destacados",
     "skills": "Habilidades Técnicas",
@@ -21,6 +21,10 @@
     "contact": "¿Tienes alguna pregunta o idea en mente? ¡Estoy aquí para ayudarte! No dudes en contactarme por correo electrónico. Estoy deseando escuchar tus ideas y colaborar en tu próximo proyecto."
   },
   "cv": "descargar cv",
+  "experienceUi": {
+    "showDetails": "Ver logros",
+    "hideDetails": "Ocultar logros"
+  },
   "flip-cards": [
     {
       "title": "Diseño",
@@ -47,7 +51,7 @@
       "text": "Despliegue eficiente de soluciones, garantizando una implantación rápida y eficaz de servicios y aplicaciones."
     },
     {
-      "title": "Data Base",
+      "title": "Database",
       "number": "5.",
       "name": "database",
       "text": "Creación y gestión de bases de datos para un almacenamiento y recuperación eficaces, garantizando un flujo de información coherente y fiable."

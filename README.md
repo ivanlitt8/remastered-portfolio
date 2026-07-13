@@ -16,11 +16,12 @@ Portfolio personal de **Full Stack Software Engineer**. Sitio de una sola págin
 
 | Área | Tecnología |
 |------|------------|
-| Framework | Next.js 14 (App Router), React 18 |
+| Framework | Next.js 16 (App Router), React 19 |
 | Estilos | Tailwind CSS |
 | i18n | i18next / react-i18next / next-i18next |
 | Tema | Context API (`ThemeContext`) |
-| Animación | `@react-spring/web` |
+| Animación | `motion` |
+| Iconos | `lucide-react` |
 
 Contenido textual y de proyectos: `public/locales/es/transEs.json` y `public/locales/en/transEn.json`.  
 Imágenes: `public/images/`.

@@ -2,16 +2,11 @@ import React from "react";
 import Icon from "./Icon";
 import { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
-import { useSpring, animated } from "@react-spring/web";
+import { motion, AnimatePresence } from "motion/react";
 
 const CopyButton = ({ label, icon, uppercase }) => {
   const { isDarkMode } = useTheme();
   const [isHovered, setIsHovered] = useState(false);
-
-  const labelAnimation = useSpring({
-    opacity: isHovered ? 1 : 0,
-    transform: `translateY(${isHovered ? 0 : 5}px)`,
-  });
 
   const handleButtonClick = () => {
     const mail = "ivanlitt8@gmail.com";
@@ -46,9 +41,17 @@ const CopyButton = ({ label, icon, uppercase }) => {
             isHovered={isHovered}
           />
         </div>
-        {isHovered && (
-          <animated.div style={labelAnimation}>{label}</animated.div>
-        )}
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 5 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 5 }}
+            >
+              {label}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </span>
     </button>
   );

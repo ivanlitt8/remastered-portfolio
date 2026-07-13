@@ -1,20 +1,17 @@
 import React from "react";
-import { useSpring, animated } from "@react-spring/web";
+import { motion } from "motion/react";
 import Icon from "./Icon";
 import { useTheme } from "@/context/ThemeContext";
 
 const AnimatedText = ({ text, place, dates, isVisible }) => {
   const { isDarkMode } = useTheme();
 
-  const props = useSpring({
-    opacity: isVisible ? 1 : 0,
-    config: { duration: 1000 },
-  });
-
   return (
     isVisible && (
-      <animated.div
-        style={props}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         className="flex flex-row mx-10 md:mx-52 space-x-2 my-5"
       >
         <Icon
@@ -31,7 +28,7 @@ const AnimatedText = ({ text, place, dates, isVisible }) => {
           <h2>{place}</h2>
           <h2>{dates}</h2>
         </div>
-      </animated.div>
+      </motion.div>
     )
   );
 };

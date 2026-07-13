@@ -21,6 +21,10 @@
     "contact": "Do you have a question or an idea in mind? I am here to help you! Feel free to contact me via email. I look forward to hearing your thoughts and collaborating on your next project."
   },
   "cv": "download cv",
+  "experienceUi": {
+    "showDetails": "View achievements",
+    "hideDetails": "Hide achievements"
+  },
   "flip-cards": [
     {
       "title": "Design",
@@ -41,13 +45,13 @@
       "text": "Focused on user-centric interface research and design, ensuring that every interaction is intuitive and accessible."
     },
     {
-      "title": "Deployd",
+      "title": "Deployment",
       "number": "4.",
       "name": "deploy",
       "text": "Efficient deployment of solutions, ensuring rapid and effective implementation of services and applications."
     },
     {
-      "title": "Data Base",
+      "title": "Database",
       "number": "5.",
       "name": "database",
       "text": "Creation and management of databases for efficient storage and retrieval, ensuring a coherent and reliable flow of information."

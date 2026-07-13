@@ -19,6 +19,7 @@
 # misc
 .DS_Store
 *.pem
+Historial.md
 
 # debug
 npm-debug.log*

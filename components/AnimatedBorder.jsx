@@ -1,22 +1,23 @@
 import React from "react";
 import { useTheme } from "@/context/ThemeContext";
-import { useSpring, animated } from "@react-spring/web";
+import { motion } from "motion/react";
 
 const AnimatedBorder = ({ isVisible }) => {
   const { isDarkMode } = useTheme();
 
-  const animatedStyles = useSpring({
-    opacity: isVisible ? 1 : 0,
-    borderBottom: isDarkMode ? "2px solid #C1CCD6" : "2px solid #545454",
-    config: { duration: 1000 },
-    marginLeft: isVisible ? "0%" : "50%",
-    width: isVisible ? "100%" : "0%",
-  });
-
   return (
     isVisible && (
       <div className="mx-20 sm:mx-52">
-        <animated.div style={animatedStyles}></animated.div>
+        <motion.div
+          initial={{ opacity: 0, marginLeft: "50%", width: "0%" }}
+          animate={{ opacity: 1, marginLeft: "0%", width: "100%" }}
+          transition={{ duration: 1 }}
+          style={{
+            borderBottom: isDarkMode
+              ? "2px solid #C1CCD6"
+              : "2px solid #545454",
+          }}
+        />
       </div>
     )
   );
