@@ -21,10 +21,33 @@
     "contact": "¿Tienes alguna pregunta o idea en mente? ¡Estoy aquí para ayudarte! No dudes en contactarme por correo electrónico. Estoy deseando escuchar tus ideas y colaborar en tu próximo proyecto."
   },
   "cv": "descargar cv",
+  "cvDownload": "Descargar CV ({{lang}})",
+  "hero": {
+    "role": "Full Stack Engineer",
+    "techs": ["React", "Next.js", "Node.js", "TypeScript"],
+    "availability": "Disponible para roles & freelance",
+    "lead": "Desarrollo aplicaciones web modernas enfocadas en rendimiento, usabilidad y arquitectura escalable — con React, Next.js y TypeScript como núcleo.",
+    "support": "He llevado a producción productos SaaS, plataformas del sector público y apps geoespaciales, transformando requisitos complejos en experiencias de usuario claras."
+  },
   "experienceUi": {
     "showDetails": "Ver logros",
     "hideDetails": "Ocultar logros"
   },
+  "projectsUi": {
+    "viewMore": "Ver más"
+  },
+  "skillsCategories": {
+    "languages": "Lenguajes",
+    "frontend": "Frontend",
+    "state": "State Management",
+    "backend": "Backend",
+    "database": "Base de datos",
+    "cloud": "Cloud",
+    "tools": "Herramientas",
+    "testing": "Testing",
+    "hint": "Selecciona una categoría"
+  },
+
   "flip-cards": [
     {
       "title": "Diseño",
@@ -69,7 +92,7 @@
       "title": "Orchestrator Agents",
       "date": "Julio 2026",
       "content": "Sistema de orquestación multi-agente basado en grafos cíclicos con LangGraph. Descompone solicitudes complejas de negocio en subtareas ejecutadas por agentes especialistas (investigación web, redacción, revisión), pausa el flujo para aprobación humana (HITL) y consolida el resultado en memoria vectorial. Incluye UI de chat en React con streaming SSE y LangGraph Studio para depuración. Stack: LangGraph, FastAPI, React, TypeScript, Tailwind, Groq (Llama 3.3), Tavily, ChromaDB, embeddings Gemini.",
-      "imageSrc": "/images/orquestador-remove.png",
+      "imageSrc": "/images/orquestadorV2.png",
       "link": "https://github.com/ivanlitt8/orchestrator-agents"
     },
     {
@@ -85,7 +108,7 @@
       "title": "Plataforma de logística educativa",
       "date": "Diciembre 2025 - Febrero 2026",
       "content": "Desarrollo frontend para el Ministerio de Educación (sector público): plataforma de logística y gestión de inventario creada desde cero, que reemplaza un sistema heredado y centraliza las operaciones en toda la provincia. Incluye control de acceso basado en roles (JWT), paneles de control, informes y exportación a Excel para la operación diaria; gestiona aproximadamente el 70% de los recursos escolares provinciales. Stack: React, Vite, Tailwind CSS, Zustand, Node.js, Express, PostgreSQL, JWT, Railway.",
-      "imageSrc": "/images/dashBoard.png",
+      "imageSrc": "/images/ministerio.png",
       "link": "https://github.com/ivanlitt8"
     },
     {
@@ -157,7 +180,7 @@
       "title": "Dash Board",
       "date": "2022",
       "content": "Una herramienta visual que permite a los usuarios supervisar y analizar datos en tiempo real relacionados con las criptomonedas, utilizando una API.",
-      "imageSrc": "/images/dashBoard.png",
+      "imageSrc": "/images/dashboard.png",
       "link": "https://cryptoboard-ivan.netlify.app/"
     },
     {
@@ -186,7 +209,14 @@
     }
   ],
   "mail": "Envíame un mail",
+  "mailCopied": "¡Copiado con éxito!",
   "copy": "copia",
+  "calendly": {
+    "eyebrow": "Virtual coffee",
+    "title": "Agendemos una llamada",
+    "description": "Reserva un sync de 15 minutos para hablar de tu proyecto, ideas o posibles roles.",
+    "cta": "Reservar horario"
+  },
   "education-cards": {
     "titles": {
       "academic": "Estudios Académicos",
@@ -225,6 +255,11 @@
         "title": "Master en Javascript",
         "place": "Udemy Victor Robles",
         "date": "Junio 2020 - Septiembre 2020"
+      },
+      "card5": {
+        "title": "Claude Code in Action",
+        "place": "Anthropic",
+        "date": "Marzo 2026"
       }
     },
     "languages": {

@@ -1,31 +1,38 @@
-import React from "react";
+"use client";
+
+import { motion } from "motion/react";
 import { useTheme } from "@/context/ThemeContext";
 
 const Filter = ({ id, label, onFilterClick, activeFilter }) => {
   const { isDarkMode } = useTheme();
-
-  const handleClick = () => {
-    // Llama a la función proporcionada desde el padre con el id del filtro clicado
-    onFilterClick(id);
-  };
-
-  const getButtonStyle = () => {
-    const baseStyle =
-      "border-2 rounded-full cursor-pointer sm:w-20 w-16 mt-5 text-center sm:text-lg text-sm font-medium uppercase";
-
-    return id === activeFilter
-      ? isDarkMode
-        ? `${baseStyle} bg-secondaryDark border-primaryDark text-primaryDark`
-        : `${baseStyle} bg-secondaryLight border-primaryLight text-primaryLight`
-      : isDarkMode
-      ? `${baseStyle} bg-primaryDark border-secondaryDark text-secondaryDark`
-      : `${baseStyle} bg-primaryLight border-secondaryLight text-secondaryLight`;
-  };
+  const isActive = id === activeFilter;
 
   return (
-    <div onClick={handleClick} className={getButtonStyle()}>
-      {label}
-    </div>
+    <button
+      type="button"
+      onClick={() => onFilterClick(id)}
+      aria-pressed={isActive}
+      className={`relative cursor-pointer px-3 py-1.5 font-mono text-xs uppercase tracking-[0.16em] transition-colors duration-300 ${
+        isActive
+          ? isDarkMode
+            ? "text-primaryDark"
+            : "text-secondaryLight"
+          : isDarkMode
+            ? "text-secondaryDark/70 hover:text-secondaryDark"
+            : "text-secondaryLight/45 hover:text-secondaryLight"
+      }`}
+    >
+      {isActive && (
+        <motion.div
+          layoutId="activeFilter"
+          className={`absolute inset-0 rounded-full ${
+            isDarkMode ? "bg-secondaryDark" : "bg-[#E8DFD2]/90"
+          }`}
+          transition={{ type: "spring", stiffness: 380, damping: 32, mass: 0.7 }}
+        />
+      )}
+      <span className="relative z-10">{label}</span>
+    </button>
   );
 };
 

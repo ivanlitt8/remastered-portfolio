@@ -7,8 +7,10 @@ const Toggle = () => {
 
   return (
     <div
-      className={`relative w-20 h-10 rounded-full p-1 cursor-pointer ${
-        isDarkMode ? "bg-secondaryDark" : "bg-primaryLight"
+      className={`relative h-10 w-20 cursor-pointer rounded-full border p-1 ${
+        isDarkMode
+          ? "border-transparent bg-secondaryDark"
+          : "border-secondaryLight/20 bg-white/50"
       }`}
       onClick={toggleTheme}
     >
@@ -23,7 +25,6 @@ const Toggle = () => {
           iconName={isDarkMode ? "moon" : "sun"}
           color={isDarkMode ? "#C1CCD6" : "#FFF1DD"}
           size="30"
-          className={`absolute ${isDarkMode ? "opacity-0" : "opacity-100"}`}
         />
       </div>
     </div>

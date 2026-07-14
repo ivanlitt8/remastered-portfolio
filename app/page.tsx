@@ -3,29 +3,20 @@
 import { useEffect, useRef } from "react";
 import NavBar from "@/components/Navbar";
 import CardContainer from "@/components/CardContainer";
-import CvButton from "@/components/CvButton";
-import { useTheme } from "@/context/ThemeContext";
-import IconList from "@/components/IconList";
-import MailButton from "@/components/MailButton";
+import SkillsMatrix from "@/components/SkillsMatrix";
 import FilterContainer from "@/components/FilterContainer";
 import EducationGrid from "@/components/EducationGrid";
-import CopyButton from "@/components/CopyButton";
+import ContactSection from "@/components/ContactSection";
 import CustomTitle from "@/components/CustomTitle";
-import CustomParagraph from "@/components/CustomParagraph";
 import ExperienceContainer from "@/components/ExperienceContainer";
+import Hero from "@/components/Hero";
 import { useTranslation } from "next-i18next";
 
 export default function Home() {
-  const { isDarkMode } = useTheme();
-
   const aboutRef = useRef(null);
   const contactRef = useRef(null);
   const projectsRef = useRef(null);
   const servicesRef = useRef(null);
-
-  const handleClick = () => {
-    console.log("Botón clickeado desde App");
-  };
 
   useEffect(() => {
     document.title = "Ivan Litt Portfolio";
@@ -34,26 +25,14 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <body className={`${isDarkMode ? "bg-primaryDark" : "bg-primaryLight"} `}>
+    <>
       <NavBar
         aboutRef={aboutRef}
         contactRef={contactRef}
         projectsRef={projectsRef}
         servicesRef={servicesRef}
       />
-      <div ref={aboutRef} className="sm:pt-10 pt-16">
-        <CustomTitle title={t("titles.landing")} />
-      </div>
-      <br />
-      <br />
-      <CustomParagraph text={t("paragraphs.first")} />
-      <br />
-      <CustomParagraph text={t("paragraphs.second")} />
-      <br />
-      <CustomParagraph text={t("paragraphs.third")} />
-      <div className="my-10 flex justify-center">
-        <CvButton label={t("cv")} icon="download" uppercase={true} />
-      </div>
+      <Hero aboutRef={aboutRef} />
       <div ref={servicesRef} className="sm:pt-10 pt-16 ">
         <CustomTitle title={t("titles.services")} />
       </div>
@@ -67,19 +46,12 @@ export default function Home() {
       </div>
       <FilterContainer />
       <CustomTitle title={t("titles.skills")} />
-      <div className="flex mt-5 mx-2 sm:mx-20 flex-wrap justify-center">
-        <IconList />
-      </div>
+      <SkillsMatrix />
       <CustomTitle title={t("titles.education")} />
       <EducationGrid />
-      <div ref={contactRef}>
-        <CustomTitle title={t("titles.contact")} />
+      <div ref={contactRef} className="sm:pt-10 pt-16">
+        <ContactSection />
       </div>
-      <CustomParagraph text={t("paragraphs.contact")} />
-      <div className="my-10 mx-5 flex justify-center space-x-4">
-        <MailButton label={t("mail")} icon="send" uppercase={false} />
-        <CopyButton label={t("copy")} icon="copy" uppercase={false} />
-      </div>
-    </body>
+    </>
   );
 }

@@ -1,16 +1,19 @@
+"use client";
+
 import React from "react";
 import styled from "styled-components";
 
-function BurguerButton(props) {
+function BurguerButton({ clicked, handleClick, color = "#252525" }) {
   return (
-    <Burguer>
+    <Burguer $color={color}>
       <div
-        onClick={props.handleClick}
-        className={`icon nav-icon-5 ${props.clicked ? "open" : ""}`}
+        onClick={handleClick}
+        className={`icon nav-icon-5 ${clicked ? "open" : ""}`}
+        aria-label="Menu"
       >
-        <span></span>
-        <span></span>
-        <span></span>
+        <span />
+        <span />
+        <span />
       </div>
     </Burguer>
   );
@@ -20,34 +23,34 @@ export default BurguerButton;
 
 const Burguer = styled.div`
   .nav-icon-5 {
-    width: 35px;
-    height: 30px;
-    margin: 10px 10px;
+    width: 28px;
+    height: 22px;
+    margin: 6px;
     position: relative;
     cursor: pointer;
     display: inline-block;
   }
   .nav-icon-5 span {
-    background-color: #fff;
+    background-color: ${(p) => p.$color};
     position: absolute;
     border-radius: 2px;
     transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
     width: 100%;
-    height: 4px;
-    transition-duration: 500ms;
+    height: 2.5px;
+    transition-duration: 400ms;
   }
   .nav-icon-5 span:nth-child(1) {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
   }
   .nav-icon-5 span:nth-child(2) {
-    top: 13px;
-    left: 0px;
+    top: 10px;
+    left: 0;
     opacity: 1;
   }
   .nav-icon-5 span:nth-child(3) {
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
   }
   .nav-icon-5:not(.open):hover span:nth-child(1) {
     transform: rotate(-3deg) scaleY(1.1);
@@ -60,13 +63,13 @@ const Burguer = styled.div`
   }
   .nav-icon-5.open span:nth-child(1) {
     transform: rotate(45deg);
-    top: 13px;
+    top: 10px;
   }
   .nav-icon-5.open span:nth-child(2) {
     opacity: 0;
   }
   .nav-icon-5.open span:nth-child(3) {
     transform: rotate(-45deg);
-    top: 13px;
+    top: 10px;
   }
 `;

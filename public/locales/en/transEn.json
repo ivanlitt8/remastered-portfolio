@@ -21,10 +21,33 @@
     "contact": "Do you have a question or an idea in mind? I am here to help you! Feel free to contact me via email. I look forward to hearing your thoughts and collaborating on your next project."
   },
   "cv": "download cv",
+  "cvDownload": "Download CV ({{lang}})",
+  "hero": {
+    "role": "Full Stack Engineer",
+    "techs": ["React", "Next.js", "Node.js", "TypeScript"],
+    "availability": "Available for roles & freelance",
+    "lead": "I build modern web applications focused on performance, usability, and scalable architecture — with React, Next.js, and TypeScript at the core.",
+    "support": "I've shipped SaaS products, public-sector platforms, and geospatial apps from technical design through production, turning complex requirements into clear user experiences."
+  },
   "experienceUi": {
     "showDetails": "View achievements",
     "hideDetails": "Hide achievements"
   },
+  "projectsUi": {
+    "viewMore": "View more"
+  },
+  "skillsCategories": {
+    "languages": "Languages",
+    "frontend": "Frontend",
+    "state": "State Management",
+    "backend": "Backend",
+    "database": "Database",
+    "cloud": "Cloud",
+    "tools": "Tools",
+    "testing": "Testing",
+    "hint": "Select a category"
+  },
+
   "flip-cards": [
     {
       "title": "Design",
@@ -69,7 +92,7 @@
       "title": "Orchestrator Agents",
       "date": "Jul 2026",
       "content": "Multi-agent orchestration system based on cyclic graphs with LangGraph. It breaks down complex business requests into subtasks run by specialist agents (web research, writing, review), pauses for human-in-the-loop (HITL) approval, and consolidates the result in vector memory. Includes a React chat UI with SSE streaming and LangGraph Studio for debugging. Stack: LangGraph, FastAPI, React, TypeScript, Tailwind, Groq (Llama 3.3), Tavily, ChromaDB, Gemini embeddings.",
-      "imageSrc": "/images/orquestador-remove.png",
+      "imageSrc": "/images/orquestadorV2.png",
       "link": "https://github.com/ivanlitt8/orchestrator-agents"
     },
     {
@@ -157,7 +180,7 @@
       "title": "Dash Board",
       "date": "2022",
       "content": "A visual tool that enables users to monitor and analyze real-time data related to cryptocurrencies, using an API.",
-      "imageSrc": "/images/dashBoard.png",
+      "imageSrc": "/images/dashboard.png",
       "link": "https://cryptoboard-ivan.netlify.app/"
     },
     {
@@ -186,7 +209,14 @@
     }
   ],
   "mail": "Drop me an email",
+  "mailCopied": "Email copied to clipboard!",
   "copy": "copy",
+  "calendly": {
+    "eyebrow": "Virtual coffee",
+    "title": "Let's schedule a call",
+    "description": "Book a quick 15-minute sync to chat about your project, ideas, or potential roles.",
+    "cta": "Book a Slot"
+  },
   "education-cards": {
     "titles": {
       "academic": "Academic Studies",
@@ -225,6 +255,11 @@
         "title": "Javascript Master",
         "place": "Udemy Victor Robles",
         "date": "June 2020 - September 2020"
+      },
+      "card5": {
+        "title": "Claude Code in Action",
+        "place": "Anthropic",
+        "date": "March 2026"
       }
     },
     "languages": {

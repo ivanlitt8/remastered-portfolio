@@ -1,131 +1,191 @@
-import React, { useState } from "react";
-import Icon from "./Icon";
+"use client";
+
+import { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import { Minus, Plus } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
-import AnimatedText from "./AnimatedText";
-import AnimatedBorder from "./AnimatedBorder";
-import EducationTitle from "./EducationTitle";
-import useWindowWidth from "@/customHooks/useWindowWidth";
 import { useTranslation } from "next-i18next";
+
+const accordionTransition = {
+  type: "spring",
+  stiffness: 140,
+  damping: 22,
+  mass: 0.75,
+};
+
+const EducationItem = ({ title, place, date, isDarkMode }) => (
+  <li className="flex flex-col gap-1 py-3.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-10">
+    <div className="min-w-0">
+      <p
+        className={`text-base font-medium tracking-tight sm:text-lg ${
+          isDarkMode ? "text-neutral-100" : "text-neutral-900"
+        }`}
+      >
+        {title}
+      </p>
+      {place ? (
+        <p
+          className={`mt-0.5 text-sm ${
+            isDarkMode ? "text-neutral-400" : "text-neutral-500"
+          }`}
+        >
+          {place}
+        </p>
+      ) : null}
+    </div>
+    {date ? (
+      <span className="shrink-0 font-mono text-xs text-neutral-400 sm:text-sm">
+        {date}
+      </span>
+    ) : null}
+  </li>
+);
+
+const EducationAccordion = ({ title, open, onToggle, children, isDarkMode }) => (
+  <div
+    className={`border-b last:border-b-0 ${
+      isDarkMode ? "border-white/10" : "border-neutral-200/70"
+    }`}
+  >
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-expanded={open}
+      className="group flex w-full items-center justify-between gap-4 py-5 text-left transition-colors"
+    >
+      <h3
+        className={`font-Mersad text-xl font-bold tracking-tighter sm:text-3xl md:text-4xl ${
+          isDarkMode ? "text-secondaryDark" : "text-secondaryLight"
+        }`}
+      >
+        {title}
+      </h3>
+      <span
+        className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full border transition-colors ${
+          isDarkMode
+            ? "border-secondaryDark/25 text-secondaryDark group-hover:border-secondaryDark/50"
+            : "border-neutral-300 text-neutral-600 group-hover:border-neutral-500"
+        }`}
+      >
+        {open ? <Minus size={16} strokeWidth={1.75} /> : <Plus size={16} strokeWidth={1.75} />}
+      </span>
+    </button>
+
+    <AnimatePresence initial={false}>
+      {open ? (
+        <motion.div
+          key="panel"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={accordionTransition}
+          className="overflow-hidden"
+        >
+          <motion.ul
+            initial={{ y: -8 }}
+            animate={{ y: 0 }}
+            exit={{ y: -6 }}
+            transition={{ type: "spring", stiffness: 180, damping: 24 }}
+            className="pb-5"
+          >
+            {children}
+          </motion.ul>
+        </motion.div>
+      ) : null}
+    </AnimatePresence>
+  </div>
+);
 
 const EducationGrid = () => {
   const { isDarkMode } = useTheme();
-  const windowWidth = useWindowWidth();
   const { t } = useTranslation();
+  const [openId, setOpenId] = useState("academic");
 
-  const [sectionVisibility, setSectionVisibility] = useState({
-    academicStudies: false,
-    courses: false,
-    languages: false,
-  });
-
-  const handleToggleContent = (section) => {
-    setSectionVisibility((prevVisibility) => {
-      return { ...prevVisibility, [section]: !prevVisibility[section] };
-    });
+  const toggle = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
-  return (
-    <div className="flex flex-col">
-      <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
-        <EducationTitle title={t("education-cards.titles.academic")} />
-        <div
-          className="cursor-pointer"
-          onClick={() => handleToggleContent("academicStudies")}
-        >
-          <Icon
-            iconName={sectionVisibility["academicStudies"] ? "minus" : "plus"}
-            color={isDarkMode ? "#C1CCD6" : "#545454"}
-            size={windowWidth < 640 ? 35 : 50}
-          />
-        </div>
-      </div>
-      <AnimatedText
-        text={t("education-cards.academic.card1.title")}
-        place={t("education-cards.academic.card1.place")}
-        dates={t("education-cards.academic.card1.date")}
-        isVisible={sectionVisibility["academicStudies"]}
-      />
-      <AnimatedBorder isVisible={sectionVisibility["academicStudies"]} />
-      <AnimatedText
-        text={t("education-cards.academic.card2.title")}
-        place={t("education-cards.academic.card2.place")}
-        dates={t("education-cards.academic.card2.date")}
-        isVisible={sectionVisibility["academicStudies"]}
-      />
+  const academic = [
+    {
+      title: t("education-cards.academic.card1.title"),
+      place: t("education-cards.academic.card1.place"),
+      date: t("education-cards.academic.card1.date"),
+    },
+    {
+      title: t("education-cards.academic.card2.title"),
+      place: t("education-cards.academic.card2.place"),
+      date: t("education-cards.academic.card2.date"),
+    },
+  ];
 
-      <div
-        className={`border-b border-2 mx-12 sm:mx-20 ${
-          isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
-        }`}
-      ></div>
-      <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
-        <EducationTitle title={t("education-cards.titles.courses")} />
-        <div
-          className="cursor-pointer"
-          onClick={() => handleToggleContent("courses")}
-        >
-          <Icon
-            iconName={sectionVisibility["courses"] ? "minus" : "plus"}
-            color={isDarkMode ? "#C1CCD6" : "#545454"}
-            size={windowWidth < 640 ? 35 : 50}
-          />
-        </div>
-      </div>
-      <AnimatedText
-        text={t("education-cards.courses.card1.title")}
-        place={t("education-cards.courses.card1.place")}
-        dates={t("education-cards.courses.card1.date")}
-        isVisible={sectionVisibility["courses"]}
-      />
-      <AnimatedBorder isVisible={sectionVisibility["courses"]} />
-      <AnimatedText
-        text={t("education-cards.courses.card2.title")}
-        place={t("education-cards.courses.card2.place")}
-        dates={t("education-cards.courses.card2.date")}
-        isVisible={sectionVisibility["courses"]}
-      />
-      <AnimatedBorder isVisible={sectionVisibility["courses"]} />
-      <AnimatedText
-        text={t("education-cards.courses.card3.title")}
-        place={t("education-cards.courses.card3.place")}
-        dates={t("education-cards.courses.card3.date")}
-        isVisible={sectionVisibility["courses"]}
-      />
-      <AnimatedBorder isVisible={sectionVisibility["courses"]} />
-      <AnimatedText
-        text={t("education-cards.courses.card4.title")}
-        place={t("education-cards.courses.card4.place")}
-        dates={t("education-cards.courses.card4.date")}
-        isVisible={sectionVisibility["courses"]}
-      />
-      <div
-        className={`border-b border-2 mx-12 sm:mx-20 ${
-          isDarkMode ? "border-secondaryDark" : "border-secondaryLight"
-        }`}
-      ></div>
-      <div className="flex-grow flex justify-between mx-12 sm:mx-24 mt-5">
-        <EducationTitle title={t("education-cards.titles.languages")} />
-        <div
-          className="cursor-pointer"
-          onClick={() => handleToggleContent("languages")}
-        >
-          <Icon
-            iconName={sectionVisibility["languages"] ? "minus" : "plus"}
-            color={isDarkMode ? "#C1CCD6" : "#545454"}
-            size={windowWidth < 640 ? 35 : 50}
-          />
-        </div>
-      </div>
-      <AnimatedText
-        text={t("education-cards.languages.lang1")}
-        isVisible={sectionVisibility["languages"]}
-      />
-      <AnimatedBorder isVisible={sectionVisibility["languages"]} />
-      <AnimatedText
-        text={t("education-cards.languages.lang2")}
-        isVisible={sectionVisibility["languages"]}
-      />
-    </div>
+  const courses = [
+    {
+      title: t("education-cards.courses.card5.title"),
+      place: t("education-cards.courses.card5.place"),
+      date: t("education-cards.courses.card5.date"),
+    },
+    {
+      title: t("education-cards.courses.card1.title"),
+      place: t("education-cards.courses.card1.place"),
+      date: t("education-cards.courses.card1.date"),
+    },
+    {
+      title: t("education-cards.courses.card2.title"),
+      place: t("education-cards.courses.card2.place"),
+      date: t("education-cards.courses.card2.date"),
+    },
+    {
+      title: t("education-cards.courses.card3.title"),
+      place: t("education-cards.courses.card3.place"),
+      date: t("education-cards.courses.card3.date"),
+    },
+    {
+      title: t("education-cards.courses.card4.title"),
+      place: t("education-cards.courses.card4.place"),
+      date: t("education-cards.courses.card4.date"),
+    },
+  ];
+
+  const languages = [
+    { title: t("education-cards.languages.lang1") },
+    { title: t("education-cards.languages.lang2") },
+  ];
+
+  return (
+    <section className="mx-5 mt-6 max-w-4xl sm:mx-20">
+      <EducationAccordion
+        title={t("education-cards.titles.academic")}
+        open={openId === "academic"}
+        onToggle={() => toggle("academic")}
+        isDarkMode={isDarkMode}
+      >
+        {academic.map((item) => (
+          <EducationItem key={item.title} {...item} isDarkMode={isDarkMode} />
+        ))}
+      </EducationAccordion>
+
+      <EducationAccordion
+        title={t("education-cards.titles.courses")}
+        open={openId === "courses"}
+        onToggle={() => toggle("courses")}
+        isDarkMode={isDarkMode}
+      >
+        {courses.map((item) => (
+          <EducationItem key={item.title} {...item} isDarkMode={isDarkMode} />
+        ))}
+      </EducationAccordion>
+
+      <EducationAccordion
+        title={t("education-cards.titles.languages")}
+        open={openId === "languages"}
+        onToggle={() => toggle("languages")}
+        isDarkMode={isDarkMode}
+      >
+        {languages.map((item) => (
+          <EducationItem key={item.title} {...item} isDarkMode={isDarkMode} />
+        ))}
+      </EducationAccordion>
+    </section>
   );
 };
 

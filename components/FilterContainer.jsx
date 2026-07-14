@@ -1,36 +1,31 @@
+"use client";
+
 import React, { useState } from "react";
 import Filter from "./Filter";
 import ProjectsContainer from "./ProjectsContainer";
 
+const FILTERS = [
+  { id: "all", label: "All" },
+  { id: "web", label: "Web" },
+  { id: "ux/ui", label: "UI/UX" },
+];
+
 const FilterContainer = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
-  const handleFilterClick = (filterId) => {
-    setActiveFilter(filterId);
-  };
-
   return (
-    <div>
-      <div className="flex sm:mx-20 mx-5">
-        <div className="ml-auto flex space-x-2">
-          <Filter
-            id="ux/ui"
-            label="ux/ui"
-            onFilterClick={handleFilterClick}
-            activeFilter={activeFilter}
-          />
-          <Filter
-            id="web"
-            label="web"
-            onFilterClick={handleFilterClick}
-            activeFilter={activeFilter}
-          />
-          <Filter
-            id="all"
-            label="all"
-            onFilterClick={handleFilterClick}
-            activeFilter={activeFilter}
-          />
+    <div className="relative z-10 mx-5 mt-6 sm:mx-20">
+      <div className="mb-6 flex justify-end sm:mb-8">
+        <div className="relative flex items-center gap-0.5">
+          {FILTERS.map((filter) => (
+            <Filter
+              key={filter.id}
+              id={filter.id}
+              label={filter.label}
+              onFilterClick={setActiveFilter}
+              activeFilter={activeFilter}
+            />
+          ))}
         </div>
       </div>
       <ProjectsContainer activeFilter={activeFilter} />
