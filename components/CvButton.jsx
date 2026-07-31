@@ -13,8 +13,8 @@ const CvButton = () => {
   const lang = i18n.language?.startsWith("es") ? "ES" : "EN";
 
   const cvUrls = {
-    es: "https://docs.google.com/document/d/1USXaI-6KyJ8LokCF2DrzhGsuti9LutqgAffzl79aYQs/edit?usp=sharing",
-    en: "https://docs.google.com/document/d/1kOOr7nTzERsGrv8_ZNtFLSC85rnyH6TfGuNmghpU_EU/edit?usp=sharing",
+    es: "https://drive.google.com/file/d/1-Oh--9nRJolDXp7CoIOzP6a9opbcPnzm/view?usp=sharing",
+    en: "https://drive.google.com/file/d/1a9UymCLt1cqR_TtywuDZGFYdRaNMuT7w/view?usp=sharing",
   };
 
   const downloadCv = () => {
